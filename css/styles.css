@@ -95,9 +95,9 @@ p {
     line-height: 30px;
 }
 hr{
-    width: 70%!important;
+    width: 80%!important;
     text-align: center;
-    margin: 5px auto!important;
+    margin: 10px auto 5px!important;
 }
 header{
     /* height: 800px; */
@@ -132,11 +132,11 @@ header::before{
     border-radius: 40px;
     display: inline-block;
     line-height: 1;
-    min-width: 180px;
+    min-width: 200px;
     text-align: center;
     color: #fff;
     margin-bottom: 30px;   
-    padding:10px 0 
+    padding:0 0 10px
 }
 .home_content h5{
     margin-bottom: 0!important;
@@ -1180,6 +1180,7 @@ input[type='radio'] {
     justify-content: flex-end;
     margin: 5px 0;
     font-weight: 600;
+    padding-right: 10px;
 }
 .checkbox-container>input{
     margin: 0 5px 0 0!important;
@@ -1246,10 +1247,15 @@ input[type='radio'] {
     object-fit: cover;
     object-position: center;
 }
-.time-schedule{
-    font-size: 12px;
-    color: #fff;
-    margin-bottom: 10px;
-    line-height: 1;
-    
+.save-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 15px 15px 15px 0;
 }
+.save-btn .to-reg-btn{
+    width: 180px;
+    vertical-align: middle;
+    padding:0
+}
+

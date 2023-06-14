@@ -1,3 +1,4 @@
+const acc='1.quan.1983.vn'
 
 // OWL CAROUSEL 
 $(document).ready(function(){
@@ -458,43 +459,6 @@ $('#avt-partner-3').click(function(){
     $('#avt-partner-3-edit').css("display","flex")
 })
 
-// AVT ĐỐI TÁC 4
-// let avtpartner4
-// const inputpartner4 = document.getElementById('avt-partner-4-input')
-// const imagepartner4 = document.getElementById('avt-partner-4');
-// inputpartner4.addEventListener('change', (e) => {
-//     if (e.target.files.length) {
-//         avtpartner4 = URL.createObjectURL(e.target.files[0]);
-//         imagepartner4.src=avtpartner4
-//     }
-//     $('#avt-partner-4-edit').hide()
-//     $('#avt-partner-4').removeClass('d-none')
-// });
-// $('#avt-partner-4').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#avt-partner-4-edit').css("display","flex")
-// })
-
-// AVT ĐỐI TÁC 5
-//  
-
-// AVT ĐỐI TÁC 6
-// let avtpartner6
-// const inputpartner6 = document.getElementById('avt-partner-6-input')
-// const imagepartner6 = document.getElementById('avt-partner-6');
-// inputpartner6.addEventListener('change', (e) => {
-//     if (e.target.files.length) {
-//         avtpartner6 = URL.createObjectURL(e.target.files[0]);
-//         imagepartner6.src=avtpartner6
-//     }
-//     $('#avt-partner-6-edit').hide()
-//     $('#avt-partner-6').removeClass('d-none')
-// });
-// $('#avt-partner-6').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#avt-partner-6-edit').css("display","flex")
-// })
-
 // TÊN ĐỐI TÁC 1 
 let partnername1
 $('#partner-name-1').click(function(){
@@ -585,96 +549,6 @@ $('#partner-pos-3-save').click(function(){
     $('#partner-pos-3').html(partnerpos3)
 })
 
-// TÊN ĐỐI TÁC 4 
-// let partnername4
-// $('#partner-name-4').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#partner-name-4-edit').css("display","flex")
-// })
-// document.getElementById('partner-name-4-input').addEventListener('input',e => {
-//     partnername4=e.target.value
-// })
-// $('#partner-name-4-save').click(function(){
-//     $('#partner-name-4-edit').hide()
-//     $('#partner-name-4').removeClass('d-none')
-//     $('#partner-name-4').html(partnername4)
-// })
-
-// VAI TRÒ ĐỐI TÁC 4
-// let partnerpos4
-// $('#partner-pos-4').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#partner-pos-4-edit').css("display","flex")
-// })
-// document.getElementById('partner-pos-4-input').addEventListener('input',e => {
-//     partnerpos4=e.target.value
-// })
-// $('#partner-pos-4-save').click(function(){
-//     $('#partner-pos-4-edit').hide()
-//     $('#partner-pos-4').removeClass('d-none')
-//     $('#partner-pos-4').html(partnerpos4)
-// })
-
-// TÊN ĐỐI TÁC 5 
-// let partnername5
-// $('#partner-name-5').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#partner-name-5-edit').css("display","flex")
-// })
-// document.getElementById('partner-name-5-input').addEventListener('input',e => {
-//     partnername5=e.target.value
-// })
-// $('#partner-name-5-save').click(function(){
-//     $('#partner-name-5-edit').hide()
-//     $('#partner-name-5').removeClass('d-none')
-//     $('#partner-name-5').html(partnername5)
-// })
-
-// VAI TRÒ ĐỐI TÁC 5
-// let partnerpos5
-// $('#partner-pos-5').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#partner-pos-5-edit').css("display","flex")
-// })
-// document.getElementById('partner-pos-5-input').addEventListener('input',e => {
-//     partnerpos5=e.target.value
-// })
-// $('#partner-pos-5-save').click(function(){
-//     $('#partner-pos-5-edit').hide()
-//     $('#partner-pos-5').removeClass('d-none')
-//     $('#partner-pos-5').html(partnerpos5)
-// })
-
-// TÊN ĐỐI TÁC 6 
-// let partnername6
-// $('#partner-name-6').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#partner-name-6-edit').css("display","flex")
-// })
-// document.getElementById('partner-name-6-input').addEventListener('input',e => {
-//     partnername6=e.target.value
-// })
-// $('#partner-name-6-save').click(function(){
-//     $('#partner-name-6-edit').hide()
-//     $('#partner-name-6').removeClass('d-none')
-//     $('#partner-name-6').html(partnername6)
-// })
-
-// VAI TRÒ ĐỐI TÁC 6
-// let partnerpos6
-// $('#partner-pos-6').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#partner-pos-6-edit').css("display","flex")
-// })
-// document.getElementById('partner-pos-6-input').addEventListener('input',e => {
-//     partnerpos6=e.target.value
-// })
-// $('#partner-pos-6-save').click(function(){
-//     $('#partner-pos-6-edit').hide()
-//     $('#partner-pos-6').removeClass('d-none')
-//     $('#partner-pos-6').html(partnerpos6)
-// })
-
 // AVT CẢM NGHĨ 1
 let avttestimonial1
 const inputtestimonial1 = document.getElementById('avt-testimonial-1-input')
@@ -692,40 +566,6 @@ $('#avt-testimonial-1').click(function(){
     $('#avt-testimonial-1-edit').css("display","flex")
 })
 
-// AVT CẢM NGHĨ 2
-// let avttestimonial2
-// const inputtestimonial2 = document.getElementById('avt-testimonial-2-input')
-// const imagetestimonial2 = document.getElementById('avt-testimonial-2');
-// inputtestimonial2.addEventListener('change', (e) => {
-//     if (e.target.files.length) {
-//         avttestimonial2 = URL.createObjectURL(e.target.files[0]);
-//         imagetestimonial2.src=avttestimonial2
-//     }
-//     $('#avt-testimonial-2-edit').hide()
-//     $('#avt-testimonial-2').removeClass('d-none')
-// });
-// $('#avt-testimonial-2').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#avt-testimonial-2-edit').css("display","flex")
-// })
-
-// CẢM NGHĨ 3
-// let avttestimonial3
-// const inputtestimonial3 = document.getElementById('avt-testimonial-3-input')
-// const imagetestimonial3 = document.getElementById('avt-testimonial-3');
-// inputtestimonial3.addEventListener('change', (e) => {
-//     if (e.target.files.length) {
-//         avttestimonial3 = URL.createObjectURL(e.target.files[0]);
-//         imagetestimonial3.src=avttestimonial3
-//     }
-//     $('#avt-testimonial-3-edit').hide()
-//     $('#avt-testimonial-3').removeClass('d-none')
-// });
-// $('#avt-testimonial-3').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#avt-testimonial-3-edit').css("display","flex")
-// })
-
 // CẢM NGHĨ 1
 let testimonial1
 $('#testimonial-text-1').click(function(){
@@ -740,36 +580,6 @@ $('#testimonial-text-1-save').click(function(){
     $('#testimonial-text-1').removeClass('d-none')
     $('#testimonial-text-1').html(testimonial1)
 })
-
-// CẢM NGHĨ 2
-// let testimonial2
-// $('#testimonial-text-2').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#testimonial-text-2-edit').css("display","flex")
-// })
-// document.getElementById('testimonial-text-2-input').addEventListener('input',e => {
-//     testimonial2=e.target.value
-// })
-// $('#testimonial-text-2-save').click(function(){
-//     $('#testimonial-text-2-edit').hide()
-//     $('#testimonial-text-2').removeClass('d-none')
-//     $('#testimonial-text-2').html(testimonial2)
-// })
-
-// CẢM NGHĨ 3
-// let testimonial3
-// $('#testimonial-text-3').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#testimonial-text-3-edit').css("display","flex")
-// })
-// document.getElementById('testimonial-text-3-input').addEventListener('input',e => {
-//     testimonial3=e.target.value
-// })
-// $('#testimonial-text-3-save').click(function(){
-//     $('#testimonial-text-3-edit').hide()
-//     $('#testimonial-text-3').removeClass('d-none')
-//     $('#testimonial-text-3').html(testimonial3)
-// })
 
 // TÊN NGƯỜI PHÁT BIỂU 1
 let testimonialname1
@@ -786,36 +596,6 @@ $('#testimonial-name-1-save').click(function(){
     $('#testimonial-name-1').html(testimonialname1)
 })
 
-// TÊN NGƯỜI PHÁT BIỂU 2
-// let testimonialname2
-// $('#testimonial-name-2').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#testimonial-name-2-edit').css("display","flex")
-// })
-// document.getElementById('testimonial-name-2-input').addEventListener('input',e => {
-//     testimonialname2=e.target.value
-// })
-// $('#testimonial-name-2-save').click(function(){
-//     $('#testimonial-name-2-edit').hide()
-//     $('#testimonial-name-2').removeClass('d-none')
-//     $('#testimonial-name-2').html(testimonialname2)
-// })
-
-// TÊN NGƯỜI PHÁT BIỂU 3
-// let testimonialname3
-// $('#testimonial-name-3').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#testimonial-name-3-edit').css("display","flex")
-// })
-// document.getElementById('testimonial-name-3-input').addEventListener('input',e => {
-//     testimonialname3=e.target.value
-// })
-// $('#testimonial-name-3-save').click(function(){
-//     $('#testimonial-name-3-edit').hide()
-//     $('#testimonial-name-3').removeClass('d-none')
-//     $('#testimonial-name-3').html(testimonialname3)
-// })
-
 // CHỨC DANH NGƯỜI PHÁT BIỂU 1
 let testimonialpos1
 $('#testimonial-pos-1').click(function(){
@@ -830,36 +610,6 @@ $('#testimonial-pos-1-save').click(function(){
     $('#testimonial-pos-1').removeClass('d-none')
     $('#testimonial-pos-1').html(testimonialpos1)
 })
-
-// CHỨC DANH NGƯỜI PHÁT BIỂU 2
-// let testimonialpos2
-// $('#testimonial-pos-2').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#testimonial-pos-2-edit').css("display","flex")
-// })
-// document.getElementById('testimonial-pos-2-input').addEventListener('input',e => {
-//     testimonialpos2=e.target.value
-// })
-// $('#testimonial-pos-2-save').click(function(){
-//     $('#testimonial-pos-2-edit').hide()
-//     $('#testimonial-pos-2').removeClass('d-none')
-//     $('#testimonial-pos-2').html(testimonialpos2)
-// })
-
-// CHỨC DANH NGƯỜI PHÁT BIỂU 3
-// let testimonialpos3
-// $('#testimonial-pos-3').click(function(){
-//     $(this).toggleClass('d-none')
-//     $('#testimonial-pos-3-edit').css("display","flex")
-// })
-// document.getElementById('testimonial-pos-3-input').addEventListener('input',e => {
-//     testimonialpos3=e.target.value
-// })
-// $('#testimonial-pos-3-save').click(function(){
-//     $('#testimonial-pos-3-edit').hide()
-//     $('#testimonial-pos-3').removeClass('d-none')
-//     $('#testimonial-pos-3').html(testimonialpos3)
-// })
 
 // REGISTRATION HEADING
 let regheading
@@ -1317,18 +1067,6 @@ $('.checkbox-content').on('click',function(){
     }
 })
 
-// LOGO BUSINESS 
-let logo 
-const inputlogo = document.getElementById('business-logo-input')
-const imagelogo = document.getElementById('business-logo');
-inputlogo.addEventListener('change', (e) => {
-    if (e.target.files.length) {
-        logo = URL.createObjectURL(e.target.files[0]);
-        imagelogo.src=logo
-    }
-    $('#business-logo').removeClass('d-none')
-    $('#business-logo-edit').hide()
-});
 $('#business-logo').click(function(){
     $(this).toggleClass('d-none')
     $('#business-logo-edit').css("display","flex")
@@ -1367,6 +1105,92 @@ $('#personal-logo').click(function(){
     $('#personal-logo-edit').css("display","flex")
 })
 // JSON 
-{
+
+
+// LƯU TẤT CẢ THAY ĐỔI + GỬI DATA 
+$('#save-change').on('click',function(){
+    let home = document.getElementById('home').outerHTML
+    let schedule = document.getElementById('schedule').outerHTML
+    let subscribe = document.getElementById('subscribe').outerHTML
+    let speaker = document.getElementById('speaker').outerHTML
+    let testimonial = document.getElementById('testimonial').outerHTML
+    let reg = document.getElementById('reg').outerHTML
+    let faq = document.getElementById('faq').outerHTML
+    let map = document.getElementById('map').outerHTML
+    const payload = {
+        htmlString: [
+            {
+                name:'home',
+                html: home,
+                show: true,
+            },
+            {
+                name:'schedule',
+                html: schedule,
+                show: true,
+            },
+            {
+                name:'subscribe',
+                html: subscribe,
+                show: true,
+            },
+            {
+                name:'speaker',
+                html: speaker,
+                show: true,
+            },
+            {
+                name:'testimonial',
+                html: testimonial,
+                show: true,
+            },
+            {
+                name:'reg',
+                html: reg,
+                show: true,
+            },
+            {
+                name:'faq',
+                html: faq,
+                show: true,
+            },
+            {
+                name:'map',
+                html: map,
+                show: true,
+            },
+        ],
+        acc:acc,
+    }   
+
+})
+
+// LƯU ẢNH PHẦN HOME -> LOGO BUSINESS
+let logoBusiness 
+const inputLogo = document.getElementById('business-logo-input')
+const imageLogo = document.getElementById('business-logo');
+inputLogo.addEventListener('change', (e) => {
+    if (e.target.files.length) {
+        logoBusiness = URL.createObjectURL(e.target.files[0]);
+        imageLogo.src=logoBusiness
+    }
+    $('#business-logo').removeClass('d-none')
+    $('#business-logo-edit').hide()
     
-}
+    const homeFormData = new FormData()
+    homeFormData.append('file', e.target.files[0])
+    homeFormData.append('section', 'home')
+    homeFormData.append('acc', acc)
+    $.ajax({
+        method:"POST",
+        url:'',
+        data: homeFormData,
+    })
+        .done(function(msg){
+            console.log('msg',msg);
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            console.log('fail');
+        });
+    // call api
+    // imagelogo.src = res json link anhr
+});
