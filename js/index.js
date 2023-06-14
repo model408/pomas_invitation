@@ -1333,6 +1333,23 @@ $('#business-logo').click(function(){
     $(this).toggleClass('d-none')
     $('#business-logo-edit').css("display","flex")
 })
+
+// LOGO PERSON 
+let personallogo 
+const inputperlogo = document.getElementById('personal-logo-input')
+const imageperlogo = document.getElementById('personal-logo');
+inputperlogo.addEventListener('change', (e) => {
+    if (e.target.files.length) {
+        personallogo = URL.createObjectURL(e.target.files[0]);
+        imageperlogo.src=personallogo
+    }
+    $('#personal-logo').removeClass('d-none')
+    $('#personal-logo-edit').hide()
+});
+$('#personal-logo').click(function(){
+    $(this).toggleClass('d-none')
+    $('#personal-logo-edit').css("display","flex")
+})
 // JSON 
 {
     

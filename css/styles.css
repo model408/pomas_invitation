@@ -1038,6 +1038,7 @@ form.reg_form .col-md-3 .single_input {
         height: 270px;
         object-fit: cover;
         object-position: center;
+        border-radius: 15px;
     }
     .col-md-4.col-sm-4.col-xs-6,    .col-md-5.col-md-offset-2.col-sm-8.col-sm-offset-2{
         padding:0!important;
