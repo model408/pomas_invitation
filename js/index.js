@@ -459,38 +459,24 @@ $('#avt-partner-3').click(function(){
 })
 
 // AVT ĐỐI TÁC 4
-let avtpartner4
-const inputpartner4 = document.getElementById('avt-partner-4-input')
-const imagepartner4 = document.getElementById('avt-partner-4');
-inputpartner4.addEventListener('change', (e) => {
-    if (e.target.files.length) {
-        avtpartner4 = URL.createObjectURL(e.target.files[0]);
-        imagepartner4.src=avtpartner4
-    }
-    $('#avt-partner-4-edit').hide()
-    $('#avt-partner-4').removeClass('d-none')
-});
-$('#avt-partner-4').click(function(){
-    $(this).toggleClass('d-none')
-    $('#avt-partner-4-edit').css("display","flex")
-})
+// let avtpartner4
+// const inputpartner4 = document.getElementById('avt-partner-4-input')
+// const imagepartner4 = document.getElementById('avt-partner-4');
+// inputpartner4.addEventListener('change', (e) => {
+//     if (e.target.files.length) {
+//         avtpartner4 = URL.createObjectURL(e.target.files[0]);
+//         imagepartner4.src=avtpartner4
+//     }
+//     $('#avt-partner-4-edit').hide()
+//     $('#avt-partner-4').removeClass('d-none')
+// });
+// $('#avt-partner-4').click(function(){
+//     $(this).toggleClass('d-none')
+//     $('#avt-partner-4-edit').css("display","flex")
+// })
 
 // AVT ĐỐI TÁC 5
-let avtpartner5
-const inputpartner5 = document.getElementById('avt-partner-5-input')
-const imagepartner5 = document.getElementById('avt-partner-5');
-inputpartner5.addEventListener('change', (e) => {
-    if (e.target.files.length) {
-        avtpartner5 = URL.createObjectURL(e.target.files[0]);
-        imagepartner5.src=avtpartner5
-    }
-    $('#avt-partner-5-edit').hide()
-    $('#avt-partner-5').removeClass('d-none')
-});
-$('#avt-partner-5').click(function(){
-    $(this).toggleClass('d-none')
-    $('#avt-partner-5-edit').css("display","flex")
-})
+//  
 
 // AVT ĐỐI TÁC 6
 // let avtpartner6
@@ -600,64 +586,64 @@ $('#partner-pos-3-save').click(function(){
 })
 
 // TÊN ĐỐI TÁC 4 
-let partnername4
-$('#partner-name-4').click(function(){
-    $(this).toggleClass('d-none')
-    $('#partner-name-4-edit').css("display","flex")
-})
-document.getElementById('partner-name-4-input').addEventListener('input',e => {
-    partnername4=e.target.value
-})
-$('#partner-name-4-save').click(function(){
-    $('#partner-name-4-edit').hide()
-    $('#partner-name-4').removeClass('d-none')
-    $('#partner-name-4').html(partnername4)
-})
+// let partnername4
+// $('#partner-name-4').click(function(){
+//     $(this).toggleClass('d-none')
+//     $('#partner-name-4-edit').css("display","flex")
+// })
+// document.getElementById('partner-name-4-input').addEventListener('input',e => {
+//     partnername4=e.target.value
+// })
+// $('#partner-name-4-save').click(function(){
+//     $('#partner-name-4-edit').hide()
+//     $('#partner-name-4').removeClass('d-none')
+//     $('#partner-name-4').html(partnername4)
+// })
 
 // VAI TRÒ ĐỐI TÁC 4
-let partnerpos4
-$('#partner-pos-4').click(function(){
-    $(this).toggleClass('d-none')
-    $('#partner-pos-4-edit').css("display","flex")
-})
-document.getElementById('partner-pos-4-input').addEventListener('input',e => {
-    partnerpos4=e.target.value
-})
-$('#partner-pos-4-save').click(function(){
-    $('#partner-pos-4-edit').hide()
-    $('#partner-pos-4').removeClass('d-none')
-    $('#partner-pos-4').html(partnerpos4)
-})
+// let partnerpos4
+// $('#partner-pos-4').click(function(){
+//     $(this).toggleClass('d-none')
+//     $('#partner-pos-4-edit').css("display","flex")
+// })
+// document.getElementById('partner-pos-4-input').addEventListener('input',e => {
+//     partnerpos4=e.target.value
+// })
+// $('#partner-pos-4-save').click(function(){
+//     $('#partner-pos-4-edit').hide()
+//     $('#partner-pos-4').removeClass('d-none')
+//     $('#partner-pos-4').html(partnerpos4)
+// })
 
 // TÊN ĐỐI TÁC 5 
-let partnername5
-$('#partner-name-5').click(function(){
-    $(this).toggleClass('d-none')
-    $('#partner-name-5-edit').css("display","flex")
-})
-document.getElementById('partner-name-5-input').addEventListener('input',e => {
-    partnername5=e.target.value
-})
-$('#partner-name-5-save').click(function(){
-    $('#partner-name-5-edit').hide()
-    $('#partner-name-5').removeClass('d-none')
-    $('#partner-name-5').html(partnername5)
-})
+// let partnername5
+// $('#partner-name-5').click(function(){
+//     $(this).toggleClass('d-none')
+//     $('#partner-name-5-edit').css("display","flex")
+// })
+// document.getElementById('partner-name-5-input').addEventListener('input',e => {
+//     partnername5=e.target.value
+// })
+// $('#partner-name-5-save').click(function(){
+//     $('#partner-name-5-edit').hide()
+//     $('#partner-name-5').removeClass('d-none')
+//     $('#partner-name-5').html(partnername5)
+// })
 
 // VAI TRÒ ĐỐI TÁC 5
-let partnerpos5
-$('#partner-pos-5').click(function(){
-    $(this).toggleClass('d-none')
-    $('#partner-pos-5-edit').css("display","flex")
-})
-document.getElementById('partner-pos-5-input').addEventListener('input',e => {
-    partnerpos5=e.target.value
-})
-$('#partner-pos-5-save').click(function(){
-    $('#partner-pos-5-edit').hide()
-    $('#partner-pos-5').removeClass('d-none')
-    $('#partner-pos-5').html(partnerpos5)
-})
+// let partnerpos5
+// $('#partner-pos-5').click(function(){
+//     $(this).toggleClass('d-none')
+//     $('#partner-pos-5-edit').css("display","flex")
+// })
+// document.getElementById('partner-pos-5-input').addEventListener('input',e => {
+//     partnerpos5=e.target.value
+// })
+// $('#partner-pos-5-save').click(function(){
+//     $('#partner-pos-5-edit').hide()
+//     $('#partner-pos-5').removeClass('d-none')
+//     $('#partner-pos-5').html(partnerpos5)
+// })
 
 // TÊN ĐỐI TÁC 6 
 // let partnername6

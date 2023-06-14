@@ -618,8 +618,9 @@ form.reg_form .col-md-3 .single_input {
 .testimonial_right > p {
     font-style: italic;
     margin: 0;
-    text-align: justify;
+    text-align: left;
     line-height: 24px;
+    letter-spacing: 0.25px;
 }
 .testimonial_bottom {
     display: inline-block;
