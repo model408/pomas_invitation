@@ -1184,8 +1184,15 @@ input[type='radio'] {
     top: 10px;
     right: 10px;
     width: 60px;
-    height: 60px;
+    height: 100%;
+    max-height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
 }
 .business-logo img{
     width: 100%;
+    max-height: 60px;
+    height: 100%;
+    border-radius: 50%;
 }
