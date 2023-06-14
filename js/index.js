@@ -1333,6 +1333,22 @@ $('#business-logo').click(function(){
     $(this).toggleClass('d-none')
     $('#business-logo-edit').css("display","flex")
 })
+// LINK WEBSITE
+let linkbl
+$('#link-bl').click(function(){
+    $(this).toggleClass('d-none')
+    $('#link-bl-edit').css("display","flex")
+})
+document.getElementById('link-bl-input').addEventListener('input',e => {
+    linkbl=e.target.value
+    document.getElementById('bl-link').href = linkbl
+
+})
+$('#link-bl-save').click(function(){
+    $('#link-bl-edit').hide()
+    $('#link-bl').removeClass('d-none')
+    $('#link-bl').html(linkbl)
+})
 
 // LOGO PERSON 
 let personallogo 

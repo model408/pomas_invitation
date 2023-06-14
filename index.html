@@ -1,323 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chỉnh sửa thư mời</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- OWL CAROUSEL  -->
-	<link rel="stylesheet" href="./OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"/>
-	<!-- FONT AWESOME  -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<!-- FONT ET-LINE  -->
-	<link href="//db.onlinewebfonts.com/c/ee5d74f0b75c5754c723eb16d34e3d65?family=et-line" rel="stylesheet" type="text/css"/>
-	<!-- CSS  -->
-	<link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-	<div class="checkbox-container">
-		<input class="checkbox-content" type="checkbox" id="home_check" name="home-checkbox" value="content-quality">
-		<label class="label-content" for="#home_check">Ẩn phần này</label>
-	</div>
-    <header id="home">
-        <div class="home_area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-	                    <div class="home_content text-center">
-	                        <h1 id="invite-heading">Thư mời tham dự chương trình đặc biệt</h1>
-							<div class="edit-input sols-edit" id="invite-heading-edit">
-								<input type="text" id="invite-heading-input" placeholder="Tên thư mời"/>
-								<button class="save-btn" id="invite-heading-save">X</button>
-							</div>
-							<div id="home-date">
-								<p class="time-schedule">Sáng: Từ 8h30 - 10h30</p>
-								<hr>
-	                    	    <h5>Thứ 6, ngày 16/06/2023</h5>
-							</div>
-							<div class="edit-input sols-edit" id="home-date-edit">
-								<input type="text" id="home-date-input" placeholder="Ngày tổ chức"/>
-								<button class="save-btn" id="home-date-save">X</button>
-							</div>
-	                        <div class="home_text" >
-								<p id="home-text">Địa chỉ: 250 Đặng Xuân Bảng, Nam Vân, Thành Phố Nam Định.</p>
-	                        </div>
-							<div class="edit-input" id="home-text-edit">
-								<input type="text" id="home-text-input" placeholder="Nội dung thư mời"/>
-								<button class="save-btn" id="home-text-save">X</button>
-							</div>
-	                    </div>
-	                </div>
-                </div>
-            </div>
-        </div>
-		<div class="business-logo">
-			<img id="business-logo" src="./img/logo-pomas.png" alt="Logo doanh nghiệp"/>
-			<div class="edit-input" id="business-logo-edit">
-				<input type="file" id="business-logo-input" placeholder="Logo doanh nghiệp"/>	
-			</div>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Chỉnh sửa thư mời</title>
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+			integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+			crossorigin="anonymous">
+		<!-- OWL CAROUSEL  -->
+		<link rel="stylesheet"
+			href="./OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+		<!-- FONT AWESOME  -->
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- FONT ET-LINE  -->
+		<link
+			href="//db.onlinewebfonts.com/c/ee5d74f0b75c5754c723eb16d34e3d65?family=et-line"
+			rel="stylesheet" type="text/css" />
+		<!-- CSS  -->
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<div class="checkbox-container">
+			<input class="checkbox-content" type="checkbox" id="home_check"
+				name="home-checkbox" value="content-quality">
+			<label class="label-content" for="#home_check">Ẩn phần này</label>
 		</div>
-    </header>
-	 <!-- HIDE/SHOW SCHEDULE  -->
-	<div class="checkbox-container">
-		<input class="checkbox-content" type="checkbox" id="schedule_check" name="schedule-checkbox" value="content-quality">
-		<label class="label-content" for="#schedule_check">Ẩn phần này</label>
-	</div>
-
-	<!-- SCHEDULE AREA  -->
-	<section class="schedule_area section_padding" id="schedule">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<div class="section_title">
-						<h1 id="invite-topic">Ứng dụng công nghệ & giải pháp cho doanh nghiệp</h1>
-						<div class="edit-input sols-edit" id="invite-topic-edit">
-							<input type="text" id="invite-topic-input" placeholder="Chủ đề buổi gặp mặt"/>
-							<button class="save-btn" id="invite-topic-save">X</button>
+		<header id="home">
+			<div class="home_area">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="home_content text-center">
+								<h1 id="invite-heading">Thư mời tham dự chương trình đặc biệt</h1>
+								<div class="edit-input sols-edit" id="invite-heading-edit">
+									<input type="text" id="invite-heading-input" placeholder="Tên thư mời" />
+									<button class="save-btn" id="invite-heading-save">X</button>
+								</div>
+								<div id="home-date">
+									<p class="time-schedule">Sáng: Từ 8h30 - 10h30</p>
+									<hr>
+									<h5>Thứ 6, ngày 16/06/2023</h5>
+								</div>
+								<div class="edit-input sols-edit" id="home-date-edit">
+									<input type="text" id="home-date-input" placeholder="Ngày tổ chức" />
+									<button class="save-btn" id="home-date-save">X</button>
+								</div>
+								<div class="home_text">
+									<p id="home-text">Địa chỉ: 250 Đặng Xuân Bảng, Nam Vân, Thành Phố Nam
+										Định.</p>
+								</div>
+								<div class="edit-input" id="home-text-edit">
+									<input type="text" id="home-text-input" placeholder="Nội dung thư mời" />
+									<button class="save-btn" id="home-text-save">X</button>
+								</div>
+							</div>
 						</div>
-						<p id="topic-text">Bạn muốn biết chúng tôi là ai & đang làm gì?</p>
-						<div class="edit-input sols-edit" id="topic-text-edit">
-							<input type="text" id="topic-text-input" placeholder="Nội dung chủ đề"/>
-							<button class="save-btn" id="topic-text-save">X</button>
-						</div>
-						<div class="section_bar"></div>
 					</div>
 				</div>
 			</div>
-			<div class="row tab-content justify-content-center">
-				<div class="col-md-3 schedule_col col-sm-4 col-xs-6">
-                    <div class="single_schedule bdt">
-                        <div class="schedule_img">
-                            <img id="avt-speaker-1" src="img/quan-pomas.jpg" alt="">
-							<!-- AVATAR SPEAKER 1 -->
-							<div class="edit-input" id="avt-speaker-1-edit">
-								<input id="avt-speaker-1-input" type="file" placeholder="Chân dung 1"/>	
-							</div>
-                        </div>
-                        <div class="schedule_foot">
-                            <p class="speaker_name" id="speaker-name-1">Nguyễn Minh Quân</p>
-							<div class="edit-input sols-edit" id="speaker-name-1-edit">
-								<input id="speaker-name-1-input" type="text" placeholder="Tên người 1"/>
-								<button class="save-btn" id="speaker-name-1-save">X</button>
-							</div>
-                            <p class="speaker_pos" id="speaker-pos-1">CEO Pomas</p>
-							<div class="edit-input" id="speaker-pos-1-edit">
-								<input id="speaker-pos-1-input" type="text" placeholder="Chúc danh người 1"/>
-								<button class="save-btn" id="speaker-pos-1-save">X</button>
-							</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 schedule_col col-sm-4 col-xs-6">
-                    <div class="single_schedule">
-                        <div class="schedule_img">
-                            <img id="avt-speaker-2" src="img/truyen-partner.jpg" alt="">
-							<!-- AVATAR SPEAKER 2 -->
-							<div class="edit-input" id="avt-speaker-2-edit">
-								<input type="file" id="avt-speaker-2-input" placeholder="Chân dung 2"/>	
-							</div>
-                        </div>
-                        <div class="schedule_foot">
-                            <p class="speaker_name" id="speaker-name-2">Trần Văn Truyền</p>
-							<div class="edit-input sols-edit" id="speaker-name-2-edit">
-								<input type="text" id="speaker-name-2-input" placeholder="Tên người 2"/>
-								<button class="save-btn" id="speaker-name-2-save">X</button>
-							</div>
-                            <p class="speaker_pos" id="speaker-pos-2">Cố vấn lãnh đạo</p>
-							<div class="edit-input" id="speaker-pos-2-edit">
-								<input type="text" id="speaker-pos-2-input" placeholder="Chúc danh người 2"/>
-								<button class="save-btn" id="speaker-pos-2-save">X</button>
-							</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 schedule_col col-sm-4 col-xs-6">
-                    <div class="single_schedule">
-                        <div class="schedule_img">
-                            <img id="avt-speaker-3" src="img/dao-partner.jpg" alt="">
-							<!-- AVATAR SPEAKER 3 -->
-							<div class="edit-input" id="avt-speaker-3-edit">
-								<input type="file" id="avt-speaker-3-input" placeholder="Chân dung 3"/>	
-							</div>
-                        </div>
-                        <div class="schedule_foot">
-                            <p class="speaker_name" id="speaker-name-3">Trần Văn Đạo</p>
-							<div class="edit-input sols-edit" id="speaker-name-3-edit">
-								<input type="text" id="speaker-name-3-input" placeholder="Tên người 3"/>
-								<button class="save-btn" id="speaker-name-3-save">X</button>
-							</div>
-                            <p class="speaker_pos" id="speaker-pos-3">Cố vấn lãnh đạo</p>
-							<div class="edit-input" id="speaker-pos-3-edit">
-								<input type="text" id="speaker-pos-3-input" placeholder="Chúc danh người 3"/>
-								<button class="save-btn" id="speaker-pos-3-save">X</button>
-							</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 schedule_col col-sm-4 col-xs-6">
-                    <div class="single_schedule bdb">
-                        <div class="schedule_img">
-                            <img id="avt-speaker-4" src="img/luu-partner.jpg" alt="">
-							<!-- AVATAR SPEAKER 4 -->
-							<div class="edit-input" id="avt-speaker-4-edit">
-								<input type="file" id="avt-speaker-4-input" placeholder="Chân dung 4"/>	
-							</div>
-                        </div>
-                        <div class="schedule_foot">
-                            <p class="speaker_name" id="speaker-name-4">Trần Mạnh Lưu</p>
-							<div class="edit-input sols-edit" id="speaker-name-4-edit">
-								<input type="text" id="speaker-name-4-input" placeholder="Tên người 4"/>
-								<button class="save-btn" id="speaker-name-4-save">X</button>
-							</div>
-                            <p class="speaker_pos" id="speaker-pos-4">Cố vấn lãnh đạo</p>
-							<div class="edit-input" id="speaker-pos-4-edit">
-								<input type="text" id="speaker-pos-4-input" placeholder="Chúc danh người 4"/>
-								<button class="save-btn" id="speaker-pos-4-save">X</button>
-							</div>
-                        </div>
-                    </div>
-                </div>
-			</div>
-		</div>
-		
-	</section>
-
-	<!-- HIDE /SHOW BUTTON SUBSCRIBE  -->
-	<div class="checkbox-container">
-		<input class="checkbox-content" type="checkbox" id="subscribe_check" name="schedule-checkbox" value="content-quality">
-		<label class="label-content" for="#subscribe_check">Ẩn phần này</label>
-	</div>
-
-   <!-- SUBSCRIBE AREA  -->
-	<section class="subscribe_area" id="subscribe">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <div id="mc_embed_signup">
-                        <div action="http://crazycafe.us13.list-manage.com/subscribe/post?u=8b098ef4cf6323e5b448b2b8b&amp;id=916b5e9f2d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe clearfix" target="_blank" novalidate="">
-                            <h1 id="ads-heading">Đừng bỏ lỡ sự kiện</h1>
-							<div class="edit-input sols-edit" id="ads-heading-edit">
-								<input type="text" id="ads-heading-input" placeholder="Promotion heading"/>
-								<button class="save-btn" id="ads-heading-save">X</button>
-							</div>
-                            <p id="ads-text">Đăng kí ngay hôm nay</p>
-							<div class="edit-input sols-edit" id="ads-text-edit">
-								<input type="text" id="ads-text-input" placeholder="Promotion text"/>
-								<button class="save-btn" id="ads-text-save">X</button>
-							</div>
-                            <a href="#reg" class="to-reg-btn" id="to-reg-btn">click here</a>
-							<div class="edit-input" id="to-reg-btn-edit">
-								<input type="text" id="to-reg-btn-input" placeholder="Nút tới phần đăng kí"/>
-								<button class="save-btn" id="to-reg-btn-save">X</button>
-							</div>
+			<div class="business-container">
+				<div class="edit-input sols-edit" id="link-bl-edit" style="display:flex">
+					<input type="text" id="link-bl-input"
+						placeholder="Cập nhật link website" style="width: 140px;"/>
+					<button class="save-btn" id="link-bl-save">X</button>
+				</div>
+				<div class="business-logo">
+					<a id="bl-link" href="https://market.pomaskhoahocnaobo.com/chat" target="_blank" rel="noreferrer noopener">
+						<img id="business-logo" src="./img/logo-pomas.png" alt="Logo doanh nghiệp" />
+						<div class="edit-input" id="business-logo-edit">
+							<input type="file" id="business-logo-input" placeholder="Logo doanh nghiệp" />
 						</div>
-                    </div>
+					</a>
 				</div>
 			</div>
+			
+			
+		</header>
+		<!-- HIDE/SHOW SCHEDULE  -->
+		<div class="checkbox-container">
+			<input class="checkbox-content" type="checkbox" id="schedule_check"
+				name="schedule-checkbox" value="content-quality">
+			<label class="label-content" for="#schedule_check">Ẩn phần này</label>
 		</div>
-	</section>
 
-	<!-- HIDE/SHOW SPEAKER  -->
-	<div class="checkbox-container">
-		<input class="checkbox-content" type="checkbox" id="speaker_check" name="speaker-checkbox" value="content-quality">
-		<label class="label-content" for="#speaker_check">Ẩn phần này</label>
-	</div>
-	<!-- SPEAKER AREA  -->
-	<section class="speaker_area section_padding" id="speaker">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<div class="section_title">
-						<h1 id="partner-heading">Đối tác chiến lược</h1>
-						<div class="edit-input sols-edit" id="partner-heading-edit">
-							<input type="text" id="partner-heading-input" placeholder="Tiêu đề phần đối tác"/>
-							<button class="save-btn" id="partner-heading-save">X</button>
+		<!-- SCHEDULE AREA  -->
+		<section class="schedule_area section_padding" id="schedule">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="section_title">
+							<h1 id="invite-topic">Ứng dụng công nghệ & giải pháp cho doanh nghiệp</h1>
+							<div class="edit-input sols-edit" id="invite-topic-edit">
+								<input type="text" id="invite-topic-input"
+									placeholder="Chủ đề buổi gặp mặt" />
+								<button class="save-btn" id="invite-topic-save">X</button>
+							</div>
+							<p id="topic-text">Bạn muốn biết chúng tôi là ai & đang làm gì?</p>
+							<div class="edit-input sols-edit" id="topic-text-edit">
+								<input type="text" id="topic-text-input" placeholder="Nội dung chủ đề" />
+								<button class="save-btn" id="topic-text-save">X</button>
+							</div>
+							<div class="section_bar"></div>
 						</div>
-						<p id="partner-text">Cùng hợp tác & phát triển.</p>
-						<div class="edit-input sols-edit" id="partner-text-edit">
-							<input type="text" id="partner-text-input" placeholder="Nội dung phần đối tác"/>
-							<button class="save-btn" id="partner-text-save">X</button>
+					</div>
+				</div>
+				<div class="row tab-content justify-content-center">
+					<div class="col-md-3 schedule_col col-sm-4 col-xs-6">
+						<div class="single_schedule bdt">
+							<div class="schedule_img">
+								<img id="avt-speaker-1" src="img/quan-pomas.jpg" alt>
+								<!-- AVATAR SPEAKER 1 -->
+								<div class="edit-input" id="avt-speaker-1-edit">
+									<input id="avt-speaker-1-input" type="file" placeholder="Chân dung 1" />
+								</div>
+							</div>
+							<div class="schedule_foot">
+								<p class="speaker_name" id="speaker-name-1">Nguyễn Minh Quân</p>
+								<div class="edit-input sols-edit" id="speaker-name-1-edit">
+									<input id="speaker-name-1-input" type="text" placeholder="Tên người 1" />
+									<button class="save-btn" id="speaker-name-1-save">X</button>
+								</div>
+								<p class="speaker_pos" id="speaker-pos-1">CEO Pomas</p>
+								<div class="edit-input" id="speaker-pos-1-edit">
+									<input id="speaker-pos-1-input" type="text"
+										placeholder="Chúc danh người 1" />
+									<button class="save-btn" id="speaker-pos-1-save">X</button>
+								</div>
+							</div>
 						</div>
-						<div class="section_bar"></div>
-					</div>	
+					</div>
+					<div class="col-md-3 schedule_col col-sm-4 col-xs-6">
+						<div class="single_schedule">
+							<div class="schedule_img">
+								<img id="avt-speaker-2" src="img/truyen-partner.jpg" alt>
+								<!-- AVATAR SPEAKER 2 -->
+								<div class="edit-input" id="avt-speaker-2-edit">
+									<input type="file" id="avt-speaker-2-input" placeholder="Chân dung 2" />
+								</div>
+							</div>
+							<div class="schedule_foot">
+								<p class="speaker_name" id="speaker-name-2">Trần Văn Truyền</p>
+								<div class="edit-input sols-edit" id="speaker-name-2-edit">
+									<input type="text" id="speaker-name-2-input" placeholder="Tên người 2" />
+									<button class="save-btn" id="speaker-name-2-save">X</button>
+								</div>
+								<p class="speaker_pos" id="speaker-pos-2">Cố vấn lãnh đạo</p>
+								<div class="edit-input" id="speaker-pos-2-edit">
+									<input type="text" id="speaker-pos-2-input"
+										placeholder="Chúc danh người 2" />
+									<button class="save-btn" id="speaker-pos-2-save">X</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 schedule_col col-sm-4 col-xs-6">
+						<div class="single_schedule">
+							<div class="schedule_img">
+								<img id="avt-speaker-3" src="img/dao-partner.jpg" alt>
+								<!-- AVATAR SPEAKER 3 -->
+								<div class="edit-input" id="avt-speaker-3-edit">
+									<input type="file" id="avt-speaker-3-input" placeholder="Chân dung 3" />
+								</div>
+							</div>
+							<div class="schedule_foot">
+								<p class="speaker_name" id="speaker-name-3">Trần Văn Đạo</p>
+								<div class="edit-input sols-edit" id="speaker-name-3-edit">
+									<input type="text" id="speaker-name-3-input" placeholder="Tên người 3" />
+									<button class="save-btn" id="speaker-name-3-save">X</button>
+								</div>
+								<p class="speaker_pos" id="speaker-pos-3">Cố vấn lãnh đạo</p>
+								<div class="edit-input" id="speaker-pos-3-edit">
+									<input type="text" id="speaker-pos-3-input"
+										placeholder="Chúc danh người 3" />
+									<button class="save-btn" id="speaker-pos-3-save">X</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 schedule_col col-sm-4 col-xs-6">
+						<div class="single_schedule bdb">
+							<div class="schedule_img">
+								<img id="avt-speaker-4" src="img/luu-partner.jpg" alt>
+								<!-- AVATAR SPEAKER 4 -->
+								<div class="edit-input" id="avt-speaker-4-edit">
+									<input type="file" id="avt-speaker-4-input" placeholder="Chân dung 4" />
+								</div>
+							</div>
+							<div class="schedule_foot">
+								<p class="speaker_name" id="speaker-name-4">Trần Mạnh Lưu</p>
+								<div class="edit-input sols-edit" id="speaker-name-4-edit">
+									<input type="text" id="speaker-name-4-input" placeholder="Tên người 4" />
+									<button class="save-btn" id="speaker-name-4-save">X</button>
+								</div>
+								<p class="speaker_pos" id="speaker-pos-4">Cố vấn lãnh đạo</p>
+								<div class="edit-input" id="speaker-pos-4-edit">
+									<input type="text" id="speaker-pos-4-input"
+										placeholder="Chúc danh người 4" />
+									<button class="save-btn" id="speaker-pos-4-save">X</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12" >
-					<div class="speaker_slider owl-carousel owl-theme owl-loaded">
-						<div class="owl-stage-outer">
-							<div class="owl-stage">
-								<div class="owl-item">
-									<figure>
-										<div class="figbg" >
-											<img id="avt-partner-1" src="./img/partner-1.jpg" alt="partner1"/>
-											<!-- AVATAR PARTNER 1 -->
-											<div class="edit-input" id="avt-partner-1-edit">
-												<input type="file" id="avt-partner-1-input" placeholder="Ảnh đối tác 1"/>	
-											</div>
-										</div>
-										<figcaption>
-											<h4 id="partner-name-1">Các đối tác chiến lược</h4>
-											<div class="edit-input sols-edit" id="partner-name-1-edit">
-												<input type="text" id="partner-name-1-input" placeholder="Tên đối tác 1"/>
-												<button class="save-btn" id="partner-name-1-save">X</button>
-											</div>
-											<span id="partner-pos-1">Đa ngành nghề</span>
-											<div class="edit-input sols-edit" id="partner-pos-1-edit">
-												<input type="text" id="partner-pos-1-input" placeholder="Chức danh đối tác 1"/>
-												<button class="save-btn" id="partner-pos-1-save">X</button>
-											</div>
-										</figcaption>
-									</figure>
+
+		</section>
+
+		<!-- HIDE /SHOW BUTTON SUBSCRIBE  -->
+		<div class="checkbox-container">
+			<input class="checkbox-content" type="checkbox" id="subscribe_check"
+				name="schedule-checkbox" value="content-quality">
+			<label class="label-content" for="#subscribe_check">Ẩn phần này</label>
+		</div>
+
+		<!-- SUBSCRIBE AREA  -->
+		<section class="subscribe_area" id="subscribe">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+						<div id="mc_embed_signup">
+							<div
+								action="http://crazycafe.us13.list-manage.com/subscribe/post?u=8b098ef4cf6323e5b448b2b8b&amp;id=916b5e9f2d"
+								method="post" id="mc-embedded-subscribe-form"
+								name="mc-embedded-subscribe-form" class="validate subscribe clearfix"
+								target="_blank" novalidate>
+								<h1 id="ads-heading">Đừng bỏ lỡ sự kiện</h1>
+								<div class="edit-input sols-edit" id="ads-heading-edit">
+									<input type="text" id="ads-heading-input"
+										placeholder="Promotion heading" />
+									<button class="save-btn" id="ads-heading-save">X</button>
 								</div>
-								<div class="owl-item">
-									<figure>
-										<div class="figbg">
-											<img id="avt-partner-2" src="./img/partner-2.jpg" alt="partner2"/>
-											<!-- AVATAR PARTNER 2 -->
-											<div class="edit-input" id="avt-partner-2-edit">
-												<input type="file" id="avt-partner-2-input" placeholder="Ảnh đối tác 2"/>	
-											</div>
-										</div>
-										<figcaption>
-											<h4 id="partner-name-2">Các đối tác chiến lược</h4>
-											<div class="edit-input sols-edit" id="partner-name-2-edit">
-												<input type="text" id="partner-name-2-input" placeholder="Tên đối tác 2"/>
-												<button class="save-btn" id="partner-name-2-save">X</button>
-											</div>
-											<span id="partner-pos-2 sols-edit">Đa ngành nghề</span>
-											<div class="edit-input" id="partner-pos-2-edit">
-												<input type="text" id="partner-pos-2-input" placeholder="Chức danh đối tác 2"/>
-												<button class="save-btn" id="partner-pos-2-save">X</button>
-											</div>
-										</figcaption>
-									</figure>
+								<p id="ads-text">Đăng kí ngay hôm nay</p>
+								<div class="edit-input sols-edit" id="ads-text-edit">
+									<input type="text" id="ads-text-input" placeholder="Promotion text" />
+									<button class="save-btn" id="ads-text-save">X</button>
 								</div>
-								<div class="owl-item">
-									<figure>
-										<div class="figbg">
-											<img id="avt-partner-3" src="./img/partner-3.jpg" alt="partner3"/>
-											<!-- AVATAR PARTNER 3 -->
-											<div class="edit-input" id="avt-partner-3-edit">
-												<input type="file" id="avt-partner-3-input" placeholder="Ảnh đối tác 3"/>	
-											</div>
-										</div>
-										<figcaption>
-											<h4 id="partner-name-3">Các đối tác chiến lược</h4>
-											<div class="edit-input sols-edit" id="partner-name-3-edit">
-												<input type="text" id="partner-name-3-input" placeholder="Tên đối tác 3"/>
-												<button class="save-btn" id="partner-name-3-save">X</button>
-											</div>
-											<span id="partner-pos-3">Đa ngành nghề</span>
-											<div class="edit-input sols-edit" id="partner-pos-3-edit">
-												<input type="text" id="partner-pos-3-input" placeholder="Chức danh đối tác 3"/>
-												<button class="save-btn" id="partner-pos-3-save">X</button>
-											</div>
-										</figcaption>
-									</figure>
+								<a href="#reg" class="to-reg-btn" id="to-reg-btn">click here</a>
+								<div class="edit-input" id="to-reg-btn-edit">
+									<input type="text" id="to-reg-btn-input"
+										placeholder="Nút tới phần đăng kí" />
+									<button class="save-btn" id="to-reg-btn-save">X</button>
 								</div>
-								<!-- <div class="owl-item">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- HIDE/SHOW SPEAKER  -->
+		<div class="checkbox-container">
+			<input class="checkbox-content" type="checkbox" id="speaker_check"
+				name="speaker-checkbox" value="content-quality">
+			<label class="label-content" for="#speaker_check">Ẩn phần này</label>
+		</div>
+		<!-- SPEAKER AREA  -->
+		<section class="speaker_area section_padding" id="speaker">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="section_title">
+							<h1 id="partner-heading">Đối tác chiến lược</h1>
+							<div class="edit-input sols-edit" id="partner-heading-edit">
+								<input type="text" id="partner-heading-input"
+									placeholder="Tiêu đề phần đối tác" />
+								<button class="save-btn" id="partner-heading-save">X</button>
+							</div>
+							<p id="partner-text">Cùng hợp tác & phát triển.</p>
+							<div class="edit-input sols-edit" id="partner-text-edit">
+								<input type="text" id="partner-text-input"
+									placeholder="Nội dung phần đối tác" />
+								<button class="save-btn" id="partner-text-save">X</button>
+							</div>
+							<div class="section_bar"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="speaker_slider owl-carousel owl-theme owl-loaded">
+							<div class="owl-stage-outer">
+								<div class="owl-stage">
+									<div class="owl-item">
+										<figure>
+											<div class="figbg">
+												<img id="avt-partner-1" src="./img/partner-1.jpg" alt="partner1" />
+												<!-- AVATAR PARTNER 1 -->
+												<div class="edit-input" id="avt-partner-1-edit">
+													<input type="file" id="avt-partner-1-input"
+														placeholder="Ảnh đối tác 1" />
+												</div>
+											</div>
+											<figcaption>
+												<h4 id="partner-name-1">Các đối tác chiến lược</h4>
+												<div class="edit-input sols-edit" id="partner-name-1-edit">
+													<input type="text" id="partner-name-1-input"
+														placeholder="Tên đối tác 1" />
+													<button class="save-btn" id="partner-name-1-save">X</button>
+												</div>
+												<span id="partner-pos-1">Đa ngành nghề</span>
+												<div class="edit-input sols-edit" id="partner-pos-1-edit">
+													<input type="text" id="partner-pos-1-input"
+														placeholder="Chức danh đối tác 1" />
+													<button class="save-btn" id="partner-pos-1-save">X</button>
+												</div>
+											</figcaption>
+										</figure>
+									</div>
+									<div class="owl-item">
+										<figure>
+											<div class="figbg">
+												<img id="avt-partner-2" src="./img/partner-2.jpg" alt="partner2" />
+												<!-- AVATAR PARTNER 2 -->
+												<div class="edit-input" id="avt-partner-2-edit">
+													<input type="file" id="avt-partner-2-input"
+														placeholder="Ảnh đối tác 2" />
+												</div>
+											</div>
+											<figcaption>
+												<h4 id="partner-name-2">Các đối tác chiến lược</h4>
+												<div class="edit-input sols-edit" id="partner-name-2-edit">
+													<input type="text" id="partner-name-2-input"
+														placeholder="Tên đối tác 2" />
+													<button class="save-btn" id="partner-name-2-save">X</button>
+												</div>
+												<span id="partner-pos-2 sols-edit">Đa ngành nghề</span>
+												<div class="edit-input" id="partner-pos-2-edit">
+													<input type="text" id="partner-pos-2-input"
+														placeholder="Chức danh đối tác 2" />
+													<button class="save-btn" id="partner-pos-2-save">X</button>
+												</div>
+											</figcaption>
+										</figure>
+									</div>
+									<div class="owl-item">
+										<figure>
+											<div class="figbg">
+												<img id="avt-partner-3" src="./img/partner-3.jpg" alt="partner3" />
+												<!-- AVATAR PARTNER 3 -->
+												<div class="edit-input" id="avt-partner-3-edit">
+													<input type="file" id="avt-partner-3-input"
+														placeholder="Ảnh đối tác 3" />
+												</div>
+											</div>
+											<figcaption>
+												<h4 id="partner-name-3">Các đối tác chiến lược</h4>
+												<div class="edit-input sols-edit" id="partner-name-3-edit">
+													<input type="text" id="partner-name-3-input"
+														placeholder="Tên đối tác 3" />
+													<button class="save-btn" id="partner-name-3-save">X</button>
+												</div>
+												<span id="partner-pos-3">Đa ngành nghề</span>
+												<div class="edit-input sols-edit" id="partner-pos-3-edit">
+													<input type="text" id="partner-pos-3-input"
+														placeholder="Chức danh đối tác 3" />
+													<button class="save-btn" id="partner-pos-3-save">X</button>
+												</div>
+											</figcaption>
+										</figure>
+									</div>
+									<!-- <div class="owl-item">
 									<figure>
 										<div class="figbg" >
 											<img id="avt-partner-4" src="./img/partner-4.jpg" alt="partner4"/>
@@ -361,72 +408,81 @@
 										</figcaption>
 									</figure>
 								</div> -->
+								</div>
 							</div>
-						</div>
-						<div class="owl-nav">
-							<div class="owl-prev">
-							</div>
-							<div class="owl-next">
+							<div class="owl-nav">
+								<div class="owl-prev">
+								</div>
+								<div class="owl-next">
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
+		</section>
 
+		<!-- HIDE/SHOW TESTIMONIAL  -->
+		<div class="checkbox-container">
+			<input class="checkbox-content" type="checkbox" id="testimonial_check"
+				name="testimonial-checkbox" value="content-quality">
+			<label class="label-content" for="#testimonial_check">Ẩn phần này</label>
 		</div>
-	</section>
 
-	<!-- HIDE/SHOW TESTIMONIAL  -->
-	<div class="checkbox-container">
-		<input class="checkbox-content" type="checkbox" id="testimonial_check" name="testimonial-checkbox" value="content-quality">
-		<label class="label-content" for="#testimonial_check">Ẩn phần này</label>
-	</div>
-
-	<!-- TESTIMOTIONAL   -->
-	<section class="testimonial_area" id="testimonial">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
-					<div class="testimonial_slider owl-carousel owl-theme owl-loaded">		
-						<div class="owl-stage-outer">
-							<div class="owl-stage" >
-								<div class="owl-item ">
-									<div class="single_testimonial clearfix">
-										<div class="testimonial_img">
-											<img id="avt-testimonial-1" src="img/testimonial-1.jpg" alt="Ảnh 1">
-											<!-- AVATAR PARTNER 1 -->
-											<div class="edit-input" id="avt-testimonial-1-edit">
-												<input type="file" id="avt-testimonial-1-input" placeholder="Ảnh cảm nghĩ 1"/>	
-											</div>
-										</div>
-										<div class="testimonial_right clearfix">
-											<p id="testimonial-text-1">Hãy tự đến nghe, trải nghiệm & cảm nhận. Chắc chắn Quý Doanh Nghiệp sẽ nhận được rất nhiều giá trị & lợi ích.</p>
-											<div class="edit-input" id="testimonial-text-1-edit">
-												<input type="text" id="testimonial-text-1-input" placeholder="Nhập cảm nghĩ 1"/>
-												<button class="save-btn" id="testimonial-text-1-save">X</button>
-											</div>
-											<div class="testimonial_bottom">
-												<p id="testimonial-name-1">Thầy Thắng Khỏe</p>
-												<div class="edit-input" id="testimonial-name-1-edit">
-													<input type="text" id="testimonial-name-1-input" placeholder="Tên người phát biểu 1"/>
-													<button class="save-btn" id="testimonial-name-1-save">X</button>
-												</div>
-												<p id="testimonial-pos-1">Đối tác chiến lược</p>
-												<div class="edit-input" id="testimonial-pos-1-edit">
-													<input type="text" id="testimonial-pos-1-input" placeholder="Tên người phát biểu 1"/>
-													<button class="save-btn" id="testimonial-pos-1-save">X</button>
+		<!-- TESTIMOTIONAL   -->
+		<section class="testimonial_area" id="testimonial">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
+						<div class="testimonial_slider owl-carousel owl-theme owl-loaded">
+							<div class="owl-stage-outer">
+								<div class="owl-stage">
+									<div class="owl-item ">
+										<div class="single_testimonial clearfix">
+											<div class="testimonial_img">
+												<img id="avt-testimonial-1" src="img/testimonial-1.jpg" alt="Ảnh 1">
+												<!-- AVATAR PARTNER 1 -->
+												<div class="edit-input" id="avt-testimonial-1-edit">
+													<input type="file" id="avt-testimonial-1-input"
+														placeholder="Ảnh cảm nghĩ 1" />
 												</div>
 											</div>
-										</div>
-										<div class="personal-logo">
-											<img id="personal-logo" src="./img/thang-logo.jpg" alt="Logo thương hiệu"/>
-											<div class="edit-input" id="personal-logo-edit">
-												<input type="file" id="personal-logo-input" placeholder="Ảnh cảm nghĩ 1"/>	
+											<div class="testimonial_right clearfix">
+												<p id="testimonial-text-1">Hãy tự đến nghe, trải nghiệm & cảm nhận.
+													Chắc chắn Quý Doanh Nghiệp sẽ nhận được rất nhiều giá trị & lợi
+													ích.</p>
+												<div class="edit-input" id="testimonial-text-1-edit">
+													<input type="text" id="testimonial-text-1-input"
+														placeholder="Nhập cảm nghĩ 1" />
+													<button class="save-btn" id="testimonial-text-1-save">X</button>
+												</div>
+												<div class="testimonial_bottom">
+													<p id="testimonial-name-1">Thầy Thắng Khỏe</p>
+													<div class="edit-input" id="testimonial-name-1-edit">
+														<input type="text" id="testimonial-name-1-input"
+															placeholder="Tên người phát biểu 1" />
+														<button class="save-btn" id="testimonial-name-1-save">X</button>
+													</div>
+													<p id="testimonial-pos-1">Đối tác chiến lược</p>
+													<div class="edit-input" id="testimonial-pos-1-edit">
+														<input type="text" id="testimonial-pos-1-input"
+															placeholder="Tên người phát biểu 1" />
+														<button class="save-btn" id="testimonial-pos-1-save">X</button>
+													</div>
+												</div>
+											</div>
+											<div class="personal-logo">
+												<img id="personal-logo" src="./img/thang-logo.jpg"
+													alt="Logo thương hiệu" />
+												<div class="edit-input" id="personal-logo-edit">
+													<input type="file" id="personal-logo-input"
+														placeholder="Ảnh cảm nghĩ 1" />
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<!-- <div class="owl-item ">
+									<!-- <div class="owl-item ">
 									<div class="single_testimonial clearfix">
 										<div class="testimonial_img">
 											<img id="avt-testimonial-2" src="img/client-2.jpg" alt="Ảnh 2">
@@ -484,7 +540,7 @@
 										</div>
 									</div>
 								</div> -->
-								<!-- <div class="owl-item">
+									<!-- <div class="owl-item">
 									<div class="single_testimonial clearfix">
 										<div class="testimonial_img"><img src="img/client-2.jpg" alt=""></div>
 										<div class="testimonial_right clearfix">
@@ -524,346 +580,403 @@
 										</div>
 									</div>
 								</div> -->
+								</div>
+							</div>
+							<div class="owl-nav">
+								<div class="owl-prev">
+								</div>
+								<div class="owl-next">
+								</div>
 							</div>
 						</div>
-						<div class="owl-nav">
-									<div class="owl-prev">
-									</div>
-									<div class="owl-next">
-									</div>
-								</div>
 					</div>
 				</div>
 			</div>
+		</section>
+
+		<!-- HIDE/SHOW REGISTRATION  -->
+		<div class="checkbox-container">
+			<input class="checkbox-content" type="checkbox" id="reg_check"
+				name="reg-checkbox" value="content-quality">
+			<label class="label-content" for="#reg_check">Ẩn phần này</label>
 		</div>
-	</section>
 
-	<!-- HIDE/SHOW REGISTRATION  -->
-	<div class="checkbox-container">
-		<input class="checkbox-content" type="checkbox" id="reg_check" name="reg-checkbox" value="content-quality">
-		<label class="label-content" for="#reg_check">Ẩn phần này</label>
-	</div>
+		<!-- REGISTRATION AREA  -->
+		<section class="reg_area" id="reg">
+			<div class="outer_container">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="reg_title">
+								<h3 id="reg-heading">Vui lòng điền thông tin</h3>
+								<div class="edit-input" id="reg-heading-edit">
+									<input type="text" id="reg-heading-input"
+										placeholder="Tên form đăng kí" />
+									<button class="save-btn" id="reg-heading-save">X</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<form action="#" class="reg_form ">
+							<div class="col-lg-4 col-md-3 col-sm-4" style="margin-bottom:30px">
+								<div class="single_input bdt">
+									<input class="bdt" type="text" placeholder="Họ & tên:">
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-4 bdr" style="margin-bottom:30px">
+								<div class="single_input">
+									<input type="text" placeholder="Tel (Zalo, Telegram):">
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-4" style="margin-bottom:30px">
+								<div class="single_input bdb">
+									<input class="bdb" type="email" placeholder="Lĩnh vực (Chuyên môn):">
+								</div>
+							</div>
+							<div class="col-lg-6 col-12">
+								<div class="row">
+									<p id="question-1" class="difficulties" style="padding-left:20px;">Những
+										"thách thức" doanh nghiệp đang gặp phải:</p>
+									<div class="edit-input" id="question-1-edit" style="margin:15px 0">
+										<input type="text" id="question-1-input" placeholder="Câu hỏi 1"
+											style="width:85%" />
+										<button class="save-btn" id="question-1-save">X</button>
+									</div>
+									<div class="col-12 text-left" style="padding-left:30px">
+										<input type="checkbox" id="content-quality" name="video-length"
+											value="video-length">
+										<label id="dif-1" class="content-label" for="video-length">Tiếp cận
+											nguồn vốn.</label>
+										<div class="edit-input" id="dif-1-edit">
+											<input class="h-20" type="text" id="dif-1-input"
+												placeholder="Khó khăn của doanh nghiệp" />
+											<button class="save-btn" id="dif-1-save">X</button>
+										</div>
+									</div>
 
-    <!-- REGISTRATION AREA  -->
-    <section class="reg_area" id="reg">
-		<div class="outer_container">
+									<div class="col-12 text-left" style="padding-left:30px">
+										<input type="checkbox" id="content-quality" name="content-quality"
+											value="content-quality">
+										<label id="dif-2" class="content-label" for="content-quality">Tối ưu
+											vận hành & quản lý.</label>
+										<div class="edit-input" id="dif-2-edit">
+											<input class="h-20" type="text" id="dif-2-input"
+												placeholder="Khó khăn của doanh nghiệp" />
+											<button class="save-btn" id="dif-2-save">X</button>
+										</div>
+									</div>
+
+									<div class="col-12 text-left" style="padding-left:30px">
+										<input type="checkbox" id="content-quality" name="content-quality"
+											value="content-quality">
+										<label id="dif-3" class="content-label" for="content-quality">Marketing
+											sản phẩm & dịch vụ.</label>
+										<div class="edit-input" id="dif-3-edit">
+											<input class="h-20" type="text" id="dif-3-input"
+												placeholder="Khó khăn của doanh nghiệp" />
+											<button class="save-btn" id="dif-3-save">X</button>
+										</div>
+									</div>
+
+									<div class="col-12 text-left" style="padding-left:30px">
+										<input type="checkbox" id="content-quality" name="content-quality"
+											value="content-quality">
+										<label id="dif-4" class="content-label" for="content-quality">Pháp lý
+											& kế toán.</label>
+										<div class="edit-input" id="dif-4-edit">
+											<input class="h-20" type="text" id="dif-4-input"
+												placeholder="Khó khăn của doanh nghiệp" />
+											<button class="save-btn" id="dif-4-save">X</button>
+										</div>
+									</div>
+
+									<div class="col-12 text-left" style="padding-left:30px">
+										<input type="checkbox" id="content-quality" name="content-quality"
+											value="content-quality">
+										<label id="dif-5" class="content-label" for="content-quality">Nguồn
+											khách hàng & đầu ra.</label>
+										<div class="edit-input" id="dif-5-edit">
+											<input class="h-20" type="text" id="dif-5-input"
+												placeholder="Khó khăn của doanh nghiệp" />
+											<button class="save-btn" id="dif-5-save">X</button>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-lg-6 col-12">
+								<fieldset>
+									<legend id="scale-quest">Quy mô doanh nghiệp của bạn:</legend>
+									<div class="edit-input" id="scale-quest-edit">
+										<input class="h-20" type="text" id="scale-quest-input"
+											placeholder="Khó khăn của doanh nghiệp" style="width:100%" />
+										<button class="save-btn" id="scale-quest-save">X</button>
+									</div>
+									<row>
+										<div class="col-12 text-left">
+											<input type="radio" name="action" checked id="definitely"
+												value="definitely">
+											<label id="scale-ans-1" class="def-label" for="definitely">Dưới 50
+												nhân sự</label>
+											<div class="edit-input" id="scale-ans-1-edit">
+												<input class="h-20" type="text" id="scale-ans-1-input"
+													placeholder="Quy mô doanh nghiệp 1" />
+												<button class="save-btn" id="scale-ans-1-save">X</button>
+											</div>
+										</div>
+										<div class="col-12 text-left">
+											<input type="radio" name="action" id="definitely" value="definitely">
+											<label id="scale-ans-2" class="def-label" for="definitely">Từ 50-500
+												nhân sự</label>
+											<div class="edit-input" id="scale-ans-2-edit">
+												<input class="h-20" type="text" id="scale-ans-2-input"
+													placeholder="Quy mô doanh nghiệp 2" />
+												<button class="save-btn" id="scale-ans-2-save">X</button>
+											</div>
+										</div>
+										<div class="col-12 text-left">
+											<input type="radio" name="action" id="definitely" value="definitely">
+											<label id="scale-ans-3" class="def-label" for="definitely"> Trên 500
+												nhân sự</label>
+											<div class="edit-input" id="scale-ans-3-edit">
+												<input type="text" id="scale-ans-3-input"
+													placeholder="Quy mô doanh nghiệp 3" />
+												<button class="save-btn" id="scale-ans-3-save">X</button>
+											</div>
+										</div>
+									</row>
+								</fieldset>
+							</div>
+							<div class="col-lg-12 col-sm-12 textarea-fb">
+								<p id="textarea-quest" class="difficulties">Hãy chia sẻ đôi điều về
+									doanh nghiệp của bạn:</p>
+								<div class="edit-input" id="textarea-quest-edit"
+									style="margin-top:20px;width:100%">
+									<input type="text" id="textarea-quest-input"
+										placeholder="Feedback thêm của doanh nghiệp" style="width: 100%;" />
+									<button class="save-btn" id="textarea-quest-save">X</button>
+								</div>
+								<textarea
+									style="width:100%;height:150px; margin-bottom: 30px; padding:10px"
+									placeholder="Vui lòng nhập địa chỉ website hoặc fanpage doanh nghiệp.">
+								</textarea>
+							</div>
+							<div class="col-lg-12 col-12 submit-btn">
+								<div class="single_input">
+									<button type="submit">Đăng kí ngay</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- HIDE SHOW BENEFITS/SOLUTIONS  -->
+		<div class="checkbox-container">
+			<input class="checkbox-content" type="checkbox" id="faq_check"
+				name="faq-checkbox" value="content-quality">
+			<label class="label-content" for="#faq_check">Ẩn phần này</label>
+		</div>
+
+		<!-- BENEFIT AREA  -->
+		<section class="faq_area section_padding" id="faq">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-12" >
-						<div class="reg_title">
-							<h3 id="reg-heading" >Vui lòng điền thông tin</h3>
-							<div class="edit-input" id="reg-heading-edit">
-								<input type="text" id="reg-heading-input" placeholder="Tên form đăng kí"/>
-								<button class="save-btn" id="reg-heading-save">X</button>
+				<div class="row justify-content-between">
+					<div class="col-md-5 col-md-offset-0 col-sm-8 col-sm-offset-2">
+						<div class="faq">
+							<div class="faq_title">
+								<h2 id="benefit-text">Pomas mong muốn được đồng hành và hỗ trợ doanh
+									nghiệp trong:</h2>
+								<div class="edit-input" id="benefit-text-edit"
+									style="margin-top:20px;width:100%">
+									<input type="text" id="benefit-text-input"
+										placeholder="Tiêu đề giải pháp, dịch vụ" style="width: 100%;" />
+									<button class="save-btn" id="benefit-text-save">X</button>
+								</div>
 							</div>
+							<dl class="accordion style2">
+								<div id="sol-1" class="active benefit-item">Truyền thông & marketing.</div>
+								<div class="edit-input sols-edit" id="sol-1-edit"
+									style="margin-top:20px;width:100%">
+									<input type="text" id="sol-1-input" placeholder="Giải pháp/dịch vụ 1"
+										style="width: 100%;" />
+									<button class="save-btn" id="sol-1-save">X</button>
+								</div>
+
+								<div id="sol-2" class="benefit-item">Tối ưu vận hành & quản lý.</div>
+								<div class="edit-input sols-edit" id="sol-2-edit"
+									style="margin-top:20px;width:100%">
+									<input type="text" id="sol-2-input" placeholder="Giải pháp/dịch vụ 2"
+										style="width: 100%;" />
+									<button class="save-btn" id="sol-2-save">X</button>
+								</div>
+
+								<div id="sol-3" class="benefit-item">Nguồn vốn & dòng tiền.</div>
+								<div class="edit-input sols-edit" id="sol-3-edit"
+									style="margin-top:20px;width:100%">
+									<input type="text" id="sol-3-input" placeholder="Giải pháp/dịch vụ 3"
+										style="width: 100%;" />
+									<button class="save-btn" id="sol-3-save">X</button>
+								</div>
+
+								<div id="sol-4" class="benefit-item">Pháp lý & kế toán.</div>
+								<div class="edit-input sols-edit" id="sol-4-edit"
+									style="margin-top:20px;width:100%">
+									<input type="text" id="sol-4-input" placeholder="Giải pháp/dịch vụ 4"
+										style="width: 100%;" />
+									<button class="save-btn" id="sol-4-save">X</button>
+								</div>
+
+								<div id="sol-5" class="benefit-item">Nguồn khách hàng & đầu ra.</div>
+								<div class="edit-input sols-edit" id="sol-5-edit"
+									style="margin-top:20px;width:100%">
+									<input type="text" id="sol-5-input" placeholder="Giải pháp/dịch vụ 5"
+										style="width: 100%;" />
+									<button class="save-btn" id="sol-5-save">X</button>
+								</div>
+
+							</dl>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<form action="#" class="reg_form ">                      
-						<div class="col-lg-4 col-md-3 col-sm-4" style="margin-bottom:30px" >
-							<div class="single_input bdt">
-								<input class="bdt" type="text" placeholder="Họ & tên:">
+					<div class="col-md-5 col-md-offset-2 col-sm-8 col-sm-offset-2">
+						<div class="sponsor_title">
+							<h2 id="imgs-title">Cộng đồng Pomas</h2>
+							<div class="edit-input sols-edit" id="imgs-title-edit"
+								style="margin-top:20px;width:100%">
+								<input type="text" id="imgs-title-input"
+									placeholder="Giải pháp/dịch vụ 5" style="width: 100%;" />
+								<button class="save-btn" id="imgs-title-save">X</button>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-3 col-sm-4 bdr"  style="margin-bottom:30px">
-							<div class="single_input">
-								<input type="text" placeholder="Tel (Zalo, Telegram):">
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-3 col-sm-4"  style="margin-bottom:30px">
-							<div class="single_input bdb">
-								<input class="bdb" type="email" placeholder="Lĩnh vực (Chuyên môn):">
-							</div>
-						</div>
-						<div class="col-lg-6 col-12">
+						<div class="sponsor">
 							<div class="row">
-								<p id="question-1" class="difficulties" style="padding-left:20px;">Những "thách thức" doanh nghiệp đang gặp phải:</p>
-								<div class="edit-input" id="question-1-edit" style="margin:15px 0">
-									<input type="text" id="question-1-input" placeholder="Câu hỏi 1" style="width:85%"/>
-									<button class="save-btn" id="question-1-save">X</button>
-								</div>
-								<div class="col-12 text-left" style="padding-left:30px">
-									<input type="checkbox" id="content-quality" name="video-length" value="video-length">
-									<label id="dif-1"  class="content-label" for="video-length">Tiếp cận nguồn vốn.</label>
-									<div class="edit-input" id="dif-1-edit">
-										<input class="h-20" type="text" id="dif-1-input" placeholder="Khó khăn của doanh nghiệp"/>
-										<button class="save-btn" id="dif-1-save">X</button>
-									</div>
-								</div>
-								
-								<div class="col-12 text-left" style="padding-left:30px">
-									<input type="checkbox" id="content-quality" name="content-quality" value="content-quality">
-									<label id="dif-2" class="content-label" for="content-quality">Tối ưu vận hành & quản lý.</label>
-									<div class="edit-input" id="dif-2-edit">
-										<input class="h-20" type="text" id="dif-2-input" placeholder="Khó khăn của doanh nghiệp"/>
-										<button class="save-btn" id="dif-2-save">X</button>
-									</div>
-								</div>
-								
-								<div class="col-12 text-left" style="padding-left:30px">
-									<input type="checkbox" id="content-quality" name="content-quality" value="content-quality">
-									<label id="dif-3" class="content-label" for="content-quality">Marketing sản phẩm & dịch vụ.</label>
-									<div class="edit-input" id="dif-3-edit">
-										<input class="h-20" type="text" id="dif-3-input" placeholder="Khó khăn của doanh nghiệp"/>
-										<button class="save-btn" id="dif-3-save">X</button>
-									</div>
-								</div>
-								
-								<div class="col-12 text-left" style="padding-left:30px">
-									<input type="checkbox" id="content-quality" name="content-quality" value="content-quality">
-									<label id="dif-4" class="content-label" for="content-quality">Pháp lý & kế toán.</label>
-									<div class="edit-input" id="dif-4-edit">
-										<input class="h-20" type="text" id="dif-4-input" placeholder="Khó khăn của doanh nghiệp"/>
-										<button class="save-btn" id="dif-4-save">X</button>
-									</div>
-								</div>
-								
-								<div class="col-12 text-left" style="padding-left:30px">
-									<input type="checkbox" id="content-quality" name="content-quality" value="content-quality">
-									<label id="dif-5" class="content-label" for="content-quality">Nguồn khách hàng & đầu ra.</label>
-									<div class="edit-input" id="dif-5-edit">
-										<input class="h-20" type="text" id="dif-5-input" placeholder="Khó khăn của doanh nghiệp"/>
-										<button class="save-btn" id="dif-5-save">X</button>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<div class="col-lg-6 col-12">
-							<fieldset>
-								<legend id="scale-quest">Quy mô doanh nghiệp của bạn:</legend>
-								<div class="edit-input" id="scale-quest-edit">
-									<input class="h-20" type="text" id="scale-quest-input" placeholder="Khó khăn của doanh nghiệp" style="width:100%"/>
-									<button class="save-btn" id="scale-quest-save">X</button>
-								</div>
-								<row>
-									<div class="col-12 text-left">
-										<input type="radio" name="action" checked id="definitely" value="definitely">
-										<label id="scale-ans-1" class="def-label" for="definitely">Dưới 50 nhân sự</label>
-										<div class="edit-input" id="scale-ans-1-edit">
-											<input class="h-20" type="text" id="scale-ans-1-input" placeholder="Quy mô doanh nghiệp 1"/>
-											<button class="save-btn" id="scale-ans-1-save">X</button>
+								<div class="col-md-4 col-sm-4 col-xs-6">
+									<div class="single_sponsor">
+										<img id="img-data-1" src="img/250dxb-1.jpg" alt>
+										<!-- ẢNH TƯ LIỆU 1 -->
+										<div class="edit-input" id="img-data-1-edit">
+											<input type="file" id="img-data-1-input" placeholder="Ảnh tư liệu 1" />
 										</div>
 									</div>
-									<div class="col-12 text-left">
-										<input type="radio" name="action" id="definitely" value="definitely">
-										<label id="scale-ans-2" class="def-label" for="definitely">Từ 50-500 nhân sự</label>
-										<div class="edit-input" id="scale-ans-2-edit">
-											<input class="h-20" type="text" id="scale-ans-2-input" placeholder="Quy mô doanh nghiệp 2"/>
-											<button class="save-btn" id="scale-ans-2-save">X</button>
+								</div>
+								<div class="col-md-4 col-sm-4 col-xs-6">
+									<div class="single_sponsor">
+										<img id="img-data-2" src="img/250dxb-2.jpg" alt>
+										<!-- ẢNH TƯ LIỆU 2 -->
+										<div class="edit-input" id="img-data-2-edit">
+											<input type="file" id="img-data-2-input" placeholder="Ảnh tư liệu 2" />
 										</div>
 									</div>
-									<div class="col-12 text-left">
-										<input type="radio" name="action"  id="definitely" value="definitely">
-										<label id="scale-ans-3" class="def-label" for="definitely"> Trên 500 nhân sự</label>
-										<div class="edit-input" id="scale-ans-3-edit">
-											<input type="text" id="scale-ans-3-input" placeholder="Quy mô doanh nghiệp 3"/>
-											<button class="save-btn" id="scale-ans-3-save">X</button>
+								</div>
+								<div class="col-md-4 col-sm-4 col-xs-6">
+									<div class="single_sponsor">
+										<img id="img-data-3" src="img/250dxb-3.jpg" alt>
+										<!-- ẢNH TƯ LIỆU 3 -->
+										<div class="edit-input" id="img-data-3-edit">
+											<input type="file" id="img-data-3-input" placeholder="Ảnh tư liệu 3" />
 										</div>
 									</div>
-								</row>
-							</fieldset>
-						</div>
-						<div class="col-lg-12 col-sm-12 textarea-fb">
-							<p id="textarea-quest" class="difficulties">Hãy chia sẻ đôi điều về doanh nghiệp của bạn:</p>
-							<div class="edit-input" id="textarea-quest-edit" style="margin-top:20px;width:100%">
-								<input type="text" id="textarea-quest-input" placeholder="Feedback thêm của doanh nghiệp" style="width: 100%;"/>
-								<button class="save-btn" id="textarea-quest-save">X</button>
+								</div>
+								<div class="col-md-4 col-sm-4 col-xs-6">
+									<div class="single_sponsor">
+										<img id="img-data-4" src="img/250dxb-4.jpg" alt>
+										<!-- ẢNH TƯ LIỆU 4 -->
+										<div class="edit-input" id="img-data-4-edit">
+											<input type="file" id="img-data-4-input" placeholder="Ảnh tư liệu 4" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-4 col-xs-6">
+									<div class="single_sponsor">
+										<img id="img-data-5" src="img/250dxb-5.jpg" alt>
+										<!-- ẢNH TƯ LIỆU 5 -->
+										<div class="edit-input" id="img-data-5-edit">
+											<input type="file" id="img-data-5-input" placeholder="Ảnh tư liệu 5" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-4 col-xs-6">
+									<div class="single_sponsor">
+										<img id="img-data-6" src="img/250dxb-6.jpg" alt>
+										<!-- ẢNH TƯ LIỆU 6 -->
+										<div class="edit-input" id="img-data-6-edit">
+											<input type="file" id="img-data-6-input" placeholder="Ảnh tư liệu 6" />
+										</div>
+									</div>
+								</div>
 							</div>
-							<textarea style="width:100%;height:150px; margin-bottom: 30px; padding:10px" placeholder="Vui lòng nhập địa chỉ website hoặc fanpage doanh nghiệp.">
-							</textarea>
 						</div>
-						<div class="col-lg-12 col-12 submit-btn">
-							<div class="single_input">
-								<button type="submit">Đăng kí ngay</button>
-							</div>
-						</div>
-					</form>
+					</div>
 				</div>
 			</div>
+		</section>
+
+		<!-- HIDE/SHOW GGMAP + CONTACT INFO  -->
+		<div class="checkbox-container">
+			<input class="checkbox-content" type="checkbox" id="map_check"
+				name="map-checkbox" value="content-quality">
+			<label class="label-content" for="#map_check">Ẩn phần này </label>
 		</div>
-	</section>
 
-	<!-- HIDE SHOW BENEFITS/SOLUTIONS  -->
-	<div class="checkbox-container">
-		<input class="checkbox-content" type="checkbox" id="faq_check" name="faq-checkbox" value="content-quality">
-		<label class="label-content" for="#faq_check">Ẩn phần này</label>
-	</div>
-
-    <!-- BENEFIT AREA  -->
-    <section class="faq_area section_padding" id="faq">
-		<div class="container">
-			<div class="row justify-content-between">
-				<div class="col-md-5 col-md-offset-0 col-sm-8 col-sm-offset-2">                    
-					<div class="faq">
-						<div class="faq_title">
-							<h2 id="benefit-text">Pomas mong muốn được đồng hành và hỗ trợ doanh nghiệp trong:</h2>
-							<div class="edit-input" id="benefit-text-edit" style="margin-top:20px;width:100%">
-								<input type="text" id="benefit-text-input" placeholder="Tiêu đề giải pháp, dịch vụ" style="width: 100%;"/>
-								<button class="save-btn" id="benefit-text-save">X</button>
-							</div>
-						</div>
-						<dl class="accordion style2">
-							<div id="sol-1" class="active benefit-item">Truyền thông & marketing.</div>
-							<div class="edit-input sols-edit" id="sol-1-edit" style="margin-top:20px;width:100%">
-								<input type="text" id="sol-1-input" placeholder="Giải pháp/dịch vụ 1" style="width: 100%;"/>
-								<button class="save-btn" id="sol-1-save">X</button>
-							</div>
-
-							<div id="sol-2" class="benefit-item">Tối ưu vận hành & quản lý.</div>
-							<div class="edit-input sols-edit" id="sol-2-edit" style="margin-top:20px;width:100%">
-								<input type="text" id="sol-2-input" placeholder="Giải pháp/dịch vụ 2" style="width: 100%;"/>
-								<button class="save-btn" id="sol-2-save">X</button>
-							</div>
-							
-							<div id="sol-3" class="benefit-item">Nguồn vốn & dòng tiền.</div>
-							<div class="edit-input sols-edit" id="sol-3-edit" style="margin-top:20px;width:100%">
-								<input type="text" id="sol-3-input" placeholder="Giải pháp/dịch vụ 3" style="width: 100%;"/>
-								<button class="save-btn" id="sol-3-save">X</button>
-							</div>
-
-							<div id="sol-4" class="benefit-item">Pháp lý & kế toán.</div>
-							<div class="edit-input sols-edit" id="sol-4-edit" style="margin-top:20px;width:100%">
-								<input type="text" id="sol-4-input" placeholder="Giải pháp/dịch vụ 4" style="width: 100%;"/>
-								<button class="save-btn" id="sol-4-save">X</button>
-							</div>
-							
-							<div id="sol-5" class="benefit-item">Nguồn khách hàng & đầu ra.</div>
-							<div class="edit-input sols-edit" id="sol-5-edit" style="margin-top:20px;width:100%">
-								<input type="text" id="sol-5-input" placeholder="Giải pháp/dịch vụ 5" style="width: 100%;"/>
-								<button class="save-btn" id="sol-5-save">X</button>
-							</div>
-							
-						</dl>
+		<!-- GOOGLE MAP + CONTACT INFO  -->
+		<section class="map_area" id="map">
+			<div id="googleMap">
+				<div class="map-wrapper">
+					<div class="map-container">
 					</div>
-				</div>
-				<div class="col-md-5 col-md-offset-2 col-sm-8 col-sm-offset-2">
-					<div class="sponsor_title">
-						<h2 id="imgs-title">Cộng đồng Pomas</h2>
-						<div class="edit-input sols-edit" id="imgs-title-edit" style="margin-top:20px;width:100%">
-							<input type="text" id="imgs-title-input" placeholder="Giải pháp/dịch vụ 5" style="width: 100%;"/>
-							<button class="save-btn" id="imgs-title-save">X</button>
-						</div>
-					</div>
-					<div class="sponsor">
-						<div class="row">
-							<div class="col-md-4 col-sm-4 col-xs-6">
-								<div class="single_sponsor">
-									<img id="img-data-1" src="img/250dxb-1.jpg" alt="">
-									<!-- ẢNH TƯ LIỆU 1 -->
-									<div class="edit-input" id="img-data-1-edit">
-										<input type="file" id="img-data-1-input" placeholder="Ảnh tư liệu 1"/>	
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-6">
-								<div class="single_sponsor">
-									<img id="img-data-2" src="img/250dxb-2.jpg" alt="">
-									<!-- ẢNH TƯ LIỆU 2 -->
-									<div class="edit-input" id="img-data-2-edit">
-										<input type="file" id="img-data-2-input" placeholder="Ảnh tư liệu 2"/>	
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-6">
-								<div class="single_sponsor">
-									<img id="img-data-3" src="img/250dxb-3.jpg" alt="">
-									<!-- ẢNH TƯ LIỆU 3 -->
-									<div class="edit-input" id="img-data-3-edit">
-										<input type="file" id="img-data-3-input" placeholder="Ảnh tư liệu 3"/>	
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-6">
-								<div class="single_sponsor">
-									<img id="img-data-4" src="img/250dxb-4.jpg" alt="">
-									<!-- ẢNH TƯ LIỆU 4 -->
-									<div class="edit-input" id="img-data-4-edit">
-										<input type="file" id="img-data-4-input" placeholder="Ảnh tư liệu 4"/>	
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-6">
-								<div class="single_sponsor">
-									<img id="img-data-5" src="img/250dxb-5.jpg" alt="">
-									<!-- ẢNH TƯ LIỆU 5 -->
-									<div class="edit-input" id="img-data-5-edit">
-										<input type="file" id="img-data-5-input" placeholder="Ảnh tư liệu 5"/>	
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-6">
-								<div class="single_sponsor">
-									<img id="img-data-6" src="img/250dxb-6.jpg" alt="">
-									<!-- ẢNH TƯ LIỆU 6 -->
-									<div class="edit-input" id="img-data-6-edit">
-										<input type="file" id="img-data-6-input" placeholder="Ảnh tư liệu 6"/>	
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6515.210978126394!2d106.18764561152116!3d20.411008423765843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e0c953e3c769%3A0xbf595905a4c052fa!2zMjUwIMSQxrDhu51uZyDEkOG6t25nIFh1w6JuIELhuqNuZywgTmFtIFbDom4sIFRQLiBOYW0gxJDhu4tuaCwgTmFtIMSQ4buLbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1686541028712!5m2!1svi!2s"
+						width="600" height="450" style="border:0;" allowfullscreen="true"
+						loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</div>
-		</div>
-	</section>
-
-	<!-- HIDE/SHOW GGMAP + CONTACT INFO  -->
-	<div class="checkbox-container">
-		<input class="checkbox-content" type="checkbox" id="map_check" name="map-checkbox" value="content-quality">
-		<label class="label-content" for="#map_check">Ẩn phần này </label>
-	</div>
-
-    <!-- GOOGLE MAP + CONTACT INFO  -->
-    <section class="map_area" id="map">
-        <div id="googleMap" >    
-			<div class="map-wrapper">
-				<div class="map-container">
-				</div>
-				 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6515.210978126394!2d106.18764561152116!3d20.411008423765843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e0c953e3c769%3A0xbf595905a4c052fa!2zMjUwIMSQxrDhu51uZyDEkOG6t25nIFh1w6JuIELhuqNuZywgTmFtIFbDom4sIFRQLiBOYW0gxJDhu4tuaCwgTmFtIMSQ4buLbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1686541028712!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			</div>
-        </div>
-        <div class="map_content_area">
-            <div class="map_content">
-                <div class="contact_info_top">
-                    <h5 id="contact_info">thông tin liên hệ</h5>
-					<div class="edit-input sols-edit" id="contact_info-edit" style="margin-top:20px;width:100%">
-						<input type="text" id="contact_info-input" placeholder="Thông tin liên hệ" style="width: 100%;"/>
-						<button class="save-btn" id="contact_info-save">X</button>
+			<div class="map_content_area">
+				<div class="map_content">
+					<div class="contact_info_top">
+						<h5 id="contact_info">thông tin liên hệ</h5>
+						<div class="edit-input sols-edit" id="contact_info-edit"
+							style="margin-top:20px;width:100%">
+							<input type="text" id="contact_info-input"
+								placeholder="Thông tin liên hệ" style="width: 100%;" />
+							<button class="save-btn" id="contact_info-save">X</button>
+						</div>
+						<div class="contact_info_left">
+							<div class="contact_icon">
+								<span class="icon-map-pin"></span>
+							</div>
+							<p id="info-locale">Địa chỉ: 250 Đặng Xuân Bảng, Nam Vân, TP.Nam Định</p>
+							<div class="edit-input" id="info-locale-edit" style="width:100%">
+								<input type="text" id="info-locale-input" placeholder="Địa chỉ"
+									style="width: 100%;" />
+								<button class="save-btn" id="info-locale-save">X</button>
+							</div>
+						</div>
+						<div class="contact_info_left">
+							<div class="contact_icon">
+								<span class="icon-envelope"></span>
+							</div>
+							<p id="info-email">Email: pomas.edu@gmail.com</p>
+							<div class="edit-input" id="info-email-edit" style="width:100%">
+								<input type="text" id="info-email-input" placeholder="Địa chỉ"
+									style="width: 100%;" />
+								<button class="save-btn" id="info-email-save">X</button>
+							</div>
+						</div>
+						<div class="contact_info_left">
+							<div class="contact_icon">
+								<span class="icon-phone"></span>
+							</div>
+							<p id="info-tel">SĐT: 0986294717</p>
+							<div class="edit-input" id="info-tel-edit" style="width:100%">
+								<input type="text" id="info-tel-input" placeholder="Địa chỉ"
+									style="width: 100%;" />
+								<button class="save-btn" id="info-tel-save">X</button>
+							</div>
+						</div>
 					</div>
-                    <div class="contact_info_left">
-                        <div class="contact_icon">
-                            <span class="icon-map-pin"></span>
-                        </div>
-                        <p id="info-locale">Địa chỉ: 250 Đặng Xuân Bảng, Nam Vân, TP.Nam Định</p>
-						<div class="edit-input" id="info-locale-edit" style="width:100%">
-							<input type="text" id="info-locale-input" placeholder="Địa chỉ" style="width: 100%;"/>
-							<button class="save-btn" id="info-locale-save">X</button>
-						</div>
-                    </div>
-                    <div class="contact_info_left">
-                        <div class="contact_icon">
-                            <span class="icon-envelope"></span>
-                        </div>
-                        <p id="info-email">Email: pomas.edu@gmail.com</p>
-						<div class="edit-input" id="info-email-edit" style="width:100%">
-							<input type="text" id="info-email-input" placeholder="Địa chỉ" style="width: 100%;"/>
-							<button class="save-btn" id="info-email-save">X</button>
-						</div>
-                    </div>
-                    <div class="contact_info_left">
-                        <div class="contact_icon">
-                            <span class="icon-phone"></span>
-                        </div>
-                        <p id="info-tel">SĐT: 0986294717</p>
-						<div class="edit-input" id="info-tel-edit" style="width:100%">
-							<input type="text" id="info-tel-input" placeholder="Địa chỉ" style="width: 100%;"/>
-							<button class="save-btn" id="info-tel-save">X</button>
-						</div>
-                    </div>
-                </div>
-                <!-- <div class="contact_link">
+					<!-- <div class="contact_link">
                     <ul>
                         <li><a href="#" class="icon-facebook"></a></li>
                         <li><a href="#" class="icon-twitter"></a></li>
@@ -871,14 +984,20 @@
                         <li><a href="#" class="icon-linkedin"></a></li>
                     </ul>
                 </div> -->
-            </div>
-		</div>
-    </section>
+				</div>
+			</div>
+		</section>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<!-- OWL CAROUSEL  -->
-	<script src="./OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-	<script src="./js/index.js"></script>
-</body>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+			integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w=="
+			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+			integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+			crossorigin="anonymous"></script>
+		<!-- OWL CAROUSEL  -->
+		<script src="./OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+		<script src="./js/index.js"></script>
+	</body>
 </html>
