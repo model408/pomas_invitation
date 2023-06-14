@@ -354,7 +354,7 @@ form.reg_form .col-md-3 .single_input {
     position: relative;
 }
 .single_input input::placeholder{
-    color:#ffffff;
+    color:#7a7777;
 }
 .single_input:before {
     background: #0b2746 none repeat scroll 0 0;
