@@ -1,9 +1,16 @@
 @font-face {font-family: "et-line"; src: url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.eot"); src: url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.woff") format("woff"), url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.svg#et-line") format("svg"); }
+@import url('https://fonts.googleapis.com/css?family=Quicksand:700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --clr-main: #d75b4c;
+    --clr-dark: #333;
+    --clr-neutral: #ddd;
+    --clr-light: #fff;
+  }
 .d-none{
     display: none!important;
 }
@@ -752,6 +759,9 @@ form.reg_form .col-md-3 .single_input {
     object-fit: cover;
     object-position: center;
 }
+.single_sponsor img:hover{
+    cursor:pointer
+}
 /* QUERY 0 -> 767  */
 @media only screen and (min-width: 0px) and (max-width: 767px){
     header {
@@ -1247,15 +1257,88 @@ input[type='radio'] {
     object-fit: cover;
     object-position: center;
 }
-.save-btn{
+.save-change{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin: 15px 15px 15px 0;
 }
-.save-btn .to-reg-btn{
-    width: 180px;
-    vertical-align: middle;
-    padding:0
+#save-change{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background: #08213d none repeat scroll 0 0;
+    color: #fff;
+    padding:10px 25px;
+    border-radius: 30px;
 }
+.login {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    z-index: 9999;
+    font-size: 1.125em;
+    line-height: 1.6;
+    text-align: center;
+    font-family: Quicksand, sans-serif;
+  }
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem 2.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    z-index: 999;
+  }
+  .modal-content h2{
+    margin-bottom: 15px;
+  }
+  .modal-content label{
+    width: 100%;
+    text-align: left;
 
+  }
+  .modal-content input{
+    padding:5px;
+    width: 100%;
+  }
+  .modal-footer{
+    padding-right: 0!important;
+  }
+  .modal-footer .login-button{
+    padding: 5px
+  }
+  .close-button {
+    float: right;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2em;
+    line-height: 2rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: var(--clr-neutral);
+    color: var(--clr-dark);
+    transition: color 0.12s ease-in-out;
+  }
+  .close-button:hover {
+    color: var(--clr-main);
+  }
+  .show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  }
