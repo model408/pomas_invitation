@@ -1094,7 +1094,8 @@ inputLogo.addEventListener("change", (e) => {
 	$("#business-logo-edit").hide();
 
 	const homeFormData = new FormData();
-	homeFormData.append("file", e.target.files[0]);
+	homeFormData.append("file", e.target.files[0]); 
+	
 	homeFormData.append("section", "home");
 	homeFormData.append("acc", acc);
 	$.ajax({
@@ -1440,3 +1441,11 @@ $("#save-change").on("click", function () {
 		console.log("fail");
 	});
 });
+
+// API XU LI FORM DANG KI 
+function handleSubmitForm() {
+	const nameInput = document.getElementById('name')
+	const telInput = document.getElementById('tel')
+	const emailInput = document.getElementById('email')
+	
+}

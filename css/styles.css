@@ -127,6 +127,32 @@ header::before{
     left: 0;
     top: 0;
 }
+input[type='radio'] {
+    accent-color: orange;
+}
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    justify-content: flex-end;
+    margin: 5px 0;
+    font-weight: 600;
+    padding-right: 10px;
+}
+.checkbox-container>input{
+    margin: 0 5px 0 0!important;
+}
+.checkbox-container .label-content{
+    color: #888;
+    font-weight: 500;
+    font-size: 16px;
+}
+.edit-input{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
 .home_area{
     padding-top: 45px;
     padding-bottom: 45px;
@@ -168,13 +194,13 @@ header::before{
     position: relative;
 }
 .section_padding{
-    padding: 100px 0;
+    padding: 50px 0;
 }
 .section_title {
     text-align: center;
     font-size: 16px;
     color: #939393;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 .section_title > h1 {
     line-height: 1.4;
@@ -214,12 +240,7 @@ header::before{
     transition: .4s;
     position: relative;
 }
-.bdt{
-    border-radius: 15px 15px 0 0!important;
-}
-.bdb{
-    border-radius: 0 0  15px 15px!important;
-}
+
 .single_schedule:hover {
     background: #d32f2f;
     cursor: pointer;
@@ -252,7 +273,7 @@ header::before{
     background-size: cover;
     position: relative;
     z-index: 1;
-    padding: 75px 0;
+    padding: 60px 0;
 }
 .subscribe_area:before {
     background: rgba(211, 47, 47, 0.95) none repeat scroll 0 0;
@@ -516,26 +537,8 @@ form.reg_form .col-md-3 .single_input {
     min-width:35px;
     margin-right: 15px;
 }
-.icon-map-pin,.icon-envelope,.icon-phone{
-    font-family: 'et-line';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: inline-block;
-}
-.icon-map-pin:before {
-    content: "\e047";
-}
-.icon-envelope:before {
-    content: "\e028";
-}
-.icon-phone:before {
-    content: "\e004";
+.contact_icon img{
+    width: 15px;
 }
 .contact_info_left > p {
     line-height: 25px;
@@ -576,6 +579,12 @@ form.reg_form .col-md-3 .single_input {
     margin-bottom: 35px;
     position: relative;
     overflow: hidden;
+}
+.figbg>img{
+    border-radius: 30px;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #6cb26ce3;
 }
 .speaker_slider {
     padding: 0 45px;
@@ -764,449 +773,6 @@ form.reg_form .col-md-3 .single_input {
 .single_sponsor img:hover{
     cursor:pointer
 }
-/* QUERY 0 -> 767  */
-@media only screen and (min-width: 0px) and (max-width: 767px){
-    header {
-        height: 340px;
-        padding-top: 15px;
-    }
-    .container {
-        width: 300px;
-    }
-    .home_content h5{
-        border-width: 1px;
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 35px;
-        margin-bottom: 20px;
-        /* min-width: 120px; */
-    }
-    .home_content h1 {
-        margin-bottom: 20px;
-        font-size: 20px;
-        line-height: 30px;
-        letter-spacing: 0.5;
-        
-    }
-    .home_text {
-        font-size: 13px;
-        margin-bottom: 21px;
-        padding: 0;
-    }
-    .home_text p {
-        line-height: 22px;
-    }
-
-    /* SCHEDULE_AREA  */
-    .section_padding {
-        padding: 50px 0;
-    }
-    .section_title {
-        margin-bottom: 30px;
-    }
-    .section_title > h1 {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-    .section_title p {
-        margin-bottom: 15px;
-        font-size: 13px;
-        line-height: 24px;
-    }
-    .section_bar {
-        width: 45px;
-    }
-
-    /* SUBSCRIBE AREA  */
-    .subscribe_area {
-        padding: 40px 0;
-    }
-    .subscribe > h1 {
-        font-size: 20px;
-        margin-bottom: 5px;
-    }
-    .subscribe > p {
-        font-size: 14px;
-        margin-bottom: 0;
-    }
-    .to-reg-btn{
-        padding:10px 15px;
-        font-size: 14px;
-        font-weight: 500;
-    }
-    /* SCHEDULE COL  */
-    .schedule_area .col-xs-6 {
-        width: 100%;
-    }
-    .single_schedule {
-        border-bottom: 1px solid #0c3460;
-        border-right: 0 none;
-        min-height: 300px;
-    }
-  
-
-    /* REGISTRATION AREA  */
-    .reg_area .outer_container {
-        width: 100%;
-        padding: 40px 0;
-    }
-    .reg_area .outer_container:before, .reg_area .outer_container {
-        border-radius: 0;
-    }
-    .reg_title > h3 {
-        font-size: 18px;
-        line-height: 30px;
-        margin-bottom: 20px;
-    }
-    .reg_form {
-        padding: 15px;
-        margin:0;
-        border-radius: 15px;
-    }
-    form.reg_form .col-md-3 .single_input {
-        margin-bottom: 5px;
-    }
-    .single_input:before {
-        line-height: 55px;
-        width: 0;
-    }
-    .single_input:after {
-        left: 5px;
-        font-size: 18px;
-        line-height: 55px;
-    }
-    .single_input > input {
-        padding-left: 50px;
-        height: 55px;
-
-    }
-    .single_input > button {
-        height: 45px;
-        font-size: 15px;
-        font-weight: 500;
-        border-radius: 0;
-    }
-    .submit-btn .single_input:after{
-        display: none;
-    }
-    .reg_form textarea{
-        margin-bottom: 15px!important;
-    }
-    /* GOOGLE MAP  */
-    .map_area > div#googleMap {
-        display: block;
-        height: 240px;
-        /* width: 270px; */
-        margin: 0 auto;
-    }
-    
-    /* CONTACT FORM  */
-    .map_content_area {
-        position: static;
-    }
-    .map_content {
-        margin: 0;
-        width: auto;
-    }
-    .contact_info_top {
-        min-height: auto;
-        padding: 30px;
-    }
-    .contact_info_top > h5 {
-        border-bottom: 1px solid #bf2828;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-    }
-    .contact_icon{
-        margin-right: 15px;
-    }
-    .contact_info_left > p {
-        font-size: 14px;
-    }
-    .style2 .benefit-item{
-        font-size: 15px;
-        margin-bottom: 0;
-        padding-left: 35px !important;
-    }
-    .style2 .benefit-item:after{
-        background-size: cover;
-        height: 26px;
-        line-height: 28px;
-        width: 18px;
-        font-size: 14px;
-    }
-
-    /* SPEAKER AREA  */
-    .figbg {
-        margin-bottom: 20px;
-    }
-    figcaption h4 {
-        font-size: 16px;
-        margin-bottom: 5px;
-    }
-    figcaption span {
-        font-size: 14px;
-    }
-    .speaker_slider{
-        padding: 0;
-    }
-    .speaker_slider .owl-prev, .speaker_slider .owl-next {
-        bottom: 5px;
-        top: unset;
-        font-size: 20px;
-    }
-    /* REG AREA  */
-    .col-lg-4.col-md-3.col-sm-4{
-        margin-bottom: 0!important;
-    }
-    .difficulties {
-        padding-left: 15px!important;
-        margin-top: 30px!important;
-        margin-bottom: 8px!important;
-        text-align: center;
-    }
-    .textarea-fb .difficulties{
-        line-height: 1.3;
-        padding-left: 0!important;
-        margin-bottom: 5px!important;
-        margin-top: 35px!important;
-        text-align: center;
-    }
-    fieldset{
-        margin-top: 25px;
-    }
-    .col-12.text-left{
-        padding-left:30px!important;
-    }
-    #content-quality{
-        margin-right: 5px!important;
-    }
-    /* TESTIMOTIONAL  */
-    .testimonial_area {
-        padding: 40px 0 60px 0;
-    }
-    .testimonial_slider {
-        padding: 0;
-    }
-    .single_testimonial {
-        border-width: 1px;
-        border-radius: 15px;
-        text-align: center;
-    }
-    .testimonial_slider .owl-prev, .testimonial_slider .owl-next {
-        bottom: -20px;
-        left: 50%;
-        margin-left: -45px;
-        top: auto;
-        box-shadow: 0 0 1px #fff, 0 0 1px #fff;
-        line-height: 30px;
-    }
-    .testimonial_slider .owl-next{
-        /* right: 50%; */
-        /* left: unset; */
-        margin-left: 5px!important;
-    }
-    .testimonial_img {
-        float: none;
-        display: inline-block;
-        margin-bottom: 5px;
-    }
-    .testimonial_right {
-        padding: 0;
-        text-align: center;
-        padding-bottom: 20px;
-    }
-    .testimonial_bottom {
-        float: none;
-        margin-top: 10px;
-    }
-    .testimonial_bottom p{
-        text-align: center;
-    }
-    .testimonial_bottom:before {
-        display: none;
-    }
-
-    /* FAQ  */
-    .sponsor_title {
-        margin-top: 40px;
-    }
-    .faq_title h2, .sponsor_title h2 {
-        font-size: 20px!important;
-        line-height: 30px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .sponsor .col-md-4 {
-        border: none;
-        border-right: 1px solid #e1e1e1 !important;
-        border-top: 1px solid #e1e1e1 !important;
-    }
-    .sponsor .col-md-4:nth-child(1), .sponsor .col-md-4:nth-child(2) {
-        border-top: none!important;
-    }
-    .sponsor .col-md-4:nth-child(2n) {
-        border-right: none!important;
-    }
-    .single_sponsor {
-        height: 140px;
-        line-height: 100px;
-    }
-    .single_sponsor img{
-        width: 100%;
-        height: 100%;
-        min-height: 140px;
-        object-fit: cover;
-        object-position: center;
-
-    }
-    .faq_area.section_padding:before {
-        display: none;
-    }
-    .figbg>img{
-        width: 270px;
-        height: 270px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 15px;
-        border: 2px solid #6cb26ce3;
-    }
-    .col-md-4.col-sm-4.col-xs-6,    .col-md-5.col-md-offset-2.col-sm-8.col-sm-offset-2{
-        padding:0!important;
-    }
-    .speaker_name{
-        line-height: 1.2;
-    }
-    .speaker_pos{
-        font-size: 12px!important;
-        line-height: 1;
-        margin-top: 10px!important;
-    }
-}
-
-/* QUERY 480 -> 767  */
-@media only screen and (min-width: 480px) and (max-width: 767px)
-{
-    .container {
-        width: 470px;
-    }
-}
-
-/* QUERY 768-> ++  */
-@media only screen and (min-width: 768px)
-{
-    p {
-        line-height: 22px;
-        margin-bottom: 10px;
-    }
-
-    .faq_title h2,.sponsor_title h2{
-        font-size: 26px;
-        margin-bottom: 50px;
-        text-align: center;
-    }
-    .style2 .benefit-item{
-        margin-bottom: 10px;
-        padding-left: 45px !important;
-        font-size: 15px;
-    }
-    .style2 .benefit-item:after{
-        background-size: cover;
-        height: 30px;
-        width: 21px;
-        line-height: 30px;
-    }
-
-    /* MAP AREA  */
-    .map_content_area {
-        right: calc(50% - 585px);
-        height: 100%;
-    }
-    .reg_form{
-        padding:50px
-    }
-    .col-md-3:first-child .single_input{
-        border-radius: 30px 0 0 30px;
-    }
-    .single_input{
-        width:90%
-    }
-    .submit-btn{
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .submit-btn .single_input{
-        width: 60%;
-    }
-    .submit-btn .single_input:after{
-        display: none;
-    }
-    .single_input:after{
-        left:15px;
-    }
-    .single_input input{
-        padding-left: 60px;
-    }
-    .single_input button{
-        width: 100%;
-    }
-    .bdr .single_input {
-        border-radius:0 30px 30px 0;
-    }
-    .bdr .single_input > input {
-        border-radius:0 30px 30px 0;
-    }
-    .difficulties{
-        margin-top: 0;
-        padding-left: 5px;
-    }
-    fieldset{
-        margin-top: 0;
-    }
-    .textarea-fb{
-        margin-top: 30px;
-    }
-}
-@media only screen and (min-width: 992px) and (max-width: 1200px)
-{
-    .testimonial_slider .owl-prev {
-        left: 0;
-    }
-    .testimonial_slider .owl-next {
-        right: 0;
-    }
-}
-
-input[type='radio'] {
-    accent-color: orange;
-}
-.checkbox-container{
-    display: flex;
-    align-items: center;
-    text-align: right;
-    justify-content: flex-end;
-    margin: 5px 0;
-    font-weight: 600;
-    padding-right: 10px;
-}
-.checkbox-container>input{
-    margin: 0 5px 0 0!important;
-}
-.checkbox-container .label-content{
-    color: #888;
-    font-weight: 500;
-    font-size: 16px;
-}
-.edit-input{
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
 .col-12.text-left{
     display: flex;
     align-items: center;
@@ -1344,3 +910,460 @@ input[type='radio'] {
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
   }
+
+/* QUERY 0 -> 767  */
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    .bdt{
+        border-radius: 15px 15px 0 0!important;
+    }
+    .bdb{
+        border-radius: 0 0  15px 15px!important;
+    }
+    header {
+        height: 340px;
+        padding-top: 15px;
+    }
+    .container {
+        width: 300px;
+    }
+    .home_content h5{
+        border-width: 1px;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 35px;
+        margin-bottom: 20px;
+        /* min-width: 120px; */
+    }
+    .home_content h1 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.5;
+        
+    }
+    .home_text {
+        font-size: 13px;
+        margin-bottom: 21px;
+        padding: 0;
+    }
+    .home_text p {
+        line-height: 22px;
+    }
+
+    /* SCHEDULE_AREA  */
+    .section_padding {
+        padding: 40px 0;
+    }
+    .section_title {
+        margin-bottom: 30px;
+    }
+    .section_title > h1 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .section_title p {
+        margin-bottom: 10px;
+        font-size: 13px;
+        line-height: 24px;
+    }
+    .section_bar {
+        width: 45px;
+    }
+
+    /* SUBSCRIBE AREA  */
+    .subscribe_area {
+        padding: 30px 0 25px;
+    }
+    .subscribe > h1 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .subscribe > p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    .to-reg-btn{
+        padding:10px 15px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    /* SCHEDULE COL  */
+    .schedule_area .col-xs-6 {
+        width: 100%;
+    }
+    .single_schedule {
+        border-bottom: 1px solid #0c3460;
+        border-right: 0 none;
+        min-height: 300px;
+    }
+  
+
+    /* REGISTRATION AREA  */
+    .reg_area .outer_container {
+        width: 100%;
+        padding: 40px 0;
+    }
+    .reg_area .outer_container:before, .reg_area .outer_container {
+        border-radius: 0;
+    }
+    .reg_title > h3 {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .reg_form {
+        padding: 15px 15px 30px 15px;
+        margin:0;
+        border-radius: 15px;
+    }
+    form.reg_form .col-md-3 .single_input {
+        margin-bottom: 5px;
+    }
+    .single_input:before {
+        line-height: 55px;
+        width: 0;
+    }
+    .single_input:after {
+        left: 5px;
+        font-size: 18px;
+        line-height: 55px;
+    }
+    .single_input > input {
+        padding-left: 50px;
+        height: 55px;
+
+    }
+    .single_input > button {
+        height: 45px;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 0;
+    }
+    .submit-btn .single_input:after{
+        display: none;
+    }
+    .reg_form textarea{
+        margin-bottom: 15px!important;
+    }
+    /* GOOGLE MAP  */
+    .map_area > div#googleMap {
+        display: block;
+        height: 240px;
+        /* width: 270px; */
+        margin: 0 auto;
+    }
+    
+    /* CONTACT FORM  */
+    .map_content_area {
+        position: static;
+    }
+    .map_content {
+        margin: 0;
+        width: auto;
+    }
+    .contact_info_top {
+        min-height: auto;
+        padding: 30px;
+    }
+    .contact_info_top > h5 {
+        border-bottom: 1px solid #bf2828;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+    .contact_icon{
+        margin-right: 15px;
+    }
+    .contact_info_left > p {
+        font-size: 14px;
+    }
+    .style2 .benefit-item{
+        font-size: 15px;
+        margin-bottom: 0;
+        padding-left: 35px !important;
+    }
+    .style2 .benefit-item:after{
+        background-size: cover;
+        height: 26px;
+        line-height: 28px;
+        width: 18px;
+        font-size: 14px;
+    }
+
+    /* SPEAKER AREA  */
+    .figbg {
+        margin-bottom: 0;
+    }
+    figcaption h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    figcaption span {
+        font-size: 14px;
+    }
+    .speaker_slider{
+        padding: 0;
+    }
+    .speaker_slider .owl-prev, .speaker_slider .owl-next {
+        bottom: 5px;
+        top: unset;
+        font-size: 20px;
+    }
+
+    /* REG AREA  */
+    .reg_area{
+        padding-top:0;
+    }
+    .col-lg-4.col-md-3.col-sm-4{
+        margin-bottom: 0!important;
+    }
+    .difficulties {
+        padding-left: 15px!important;
+        margin-top: 30px!important;
+        margin-bottom: 8px!important;
+        text-align: center;
+    }
+    .textarea-fb .difficulties{
+        line-height: 1.3;
+        padding-left: 0!important;
+        margin-bottom: 5px!important;
+        margin-top: 35px!important;
+        text-align: center;
+    }
+    fieldset{
+        margin-top: 25px;
+    }
+    .col-12.text-left{
+        padding-left:30px!important;
+    }
+    #content-quality{
+        margin-right: 5px!important;
+    }
+    /* TESTIMOTIONAL  */
+    .testimonial_area {
+        padding: 40px 0 60px 0;
+    }
+    .testimonial_slider {
+        padding: 0;
+    }
+    .single_testimonial {
+        border-width: 1px;
+        border-radius: 15px;
+        text-align: center;
+    }
+    .testimonial_slider .owl-prev, .testimonial_slider .owl-next {
+        bottom: -20px;
+        left: 50%;
+        margin-left: -45px;
+        top: auto;
+        box-shadow: 0 0 1px #fff, 0 0 1px #fff;
+        line-height: 30px;
+    }
+    .testimonial_slider .owl-next{
+        /* right: 50%; */
+        /* left: unset; */
+        margin-left: 5px!important;
+    }
+    .testimonial_img {
+        float: none;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+    .testimonial_right {
+        padding: 0;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .testimonial_bottom {
+        float: none;
+        margin-top: 10px;
+    }
+    .testimonial_bottom p{
+        text-align: center;
+    }
+    .testimonial_bottom:before {
+        display: none;
+    }
+
+    /* FAQ  */
+    .sponsor_title {
+        margin-top: 30px;
+    }
+    .faq_title h2, .sponsor_title h2 {
+        font-size: 20px!important;
+        line-height: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .sponsor .col-md-4 {
+        border: none;
+        border-right: 1px solid #e1e1e1 !important;
+        border-top: 1px solid #e1e1e1 !important;
+    }
+    .sponsor .col-md-4:nth-child(1), .sponsor .col-md-4:nth-child(2) {
+        border-top: none!important;
+    }
+    .sponsor .col-md-4:nth-child(2n) {
+        border-right: none!important;
+    }
+    .single_sponsor {
+        height: 140px;
+        line-height: 100px;
+    }
+    .single_sponsor img{
+        width: 100%;
+        height: 100%;
+        min-height: 140px;
+        object-fit: cover;
+        object-position: center;
+
+    }
+    .faq_area.section_padding:before {
+        display: none;
+    }
+    .figbg>img{
+        width: 270px;
+        height: 270px;
+    }
+    .col-md-4.col-sm-4.col-xs-6,    .col-md-5.col-md-offset-2.col-sm-8.col-sm-offset-2{
+        padding:0!important;
+    }
+    .speaker_name{
+        line-height: 1.2;
+    }
+    .speaker_pos{
+        font-size: 12px!important;
+        line-height: 1;
+        margin-top: 10px!important;
+    }
+    #content-quality{
+        margin-right: 5px!important;
+    }
+}
+
+/* QUERY 480 -> 767  */
+@media only screen and (min-width: 480px) and (max-width: 767px)
+{
+    .container {
+        width: 470px;
+    }
+}
+
+/* QUERY 768-> ++  */
+@media only screen and (min-width: 768px)
+{
+    p {
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+
+    .faq_title h2,.sponsor_title h2{
+        font-size: 26px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .style2 .benefit-item{
+        margin-bottom: 10px;
+        padding-left: 45px !important;
+        font-size: 15px;
+    }
+    .style2 .benefit-item:after{
+        background-size: cover;
+        height: 30px;
+        width: 21px;
+        line-height: 30px;
+    }
+
+    /* MAP AREA  */
+    .map_content_area {
+        right: calc(50% - 585px);
+        height: 100%;
+    }
+    .reg_form{
+        padding:50px
+    }
+    .col-md-3:first-child .single_input{
+        border-radius: 30px 0 0 30px;
+    }
+    .single_input{
+        width:90%
+    }
+    .submit-btn{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .submit-btn .single_input{
+        width: 60%;
+    }
+    .submit-btn .single_input:after{
+        display: none;
+    }
+    .single_input:after{
+        left:15px;
+    }
+    .single_input input{
+        padding-left: 60px;
+    }
+    .single_input button{
+        width: 100%;
+    }
+    .bdr .single_input {
+        border-radius:0 30px 30px 0;
+    }
+    .difficulties{
+        margin-top: 0;
+        padding-left: 5px;
+    }
+    fieldset{
+        margin-top: 0;
+    }
+    .textarea-fb{
+        margin-top: 30px;
+    }
+    .modal-content{
+        width: 30%;
+    }
+    .col-12.text-left input{
+        margin-right: 5px!important;
+    }
+    .reg_area .outer_container:before{
+        border-radius: 50px;
+    }
+    .schedule_col:first-child .single_schedule{
+        border-radius: 30px 0 0 30px;
+    }
+    .schedule_col:last-child .single_schedule{
+        border-radius: 0 30px 30px 0;
+    }
+    /* PHAN DOI TAC  */
+    figcaption h4{
+        margin-bottom: 8px;
+    }
+    .figbg{
+        margin-bottom: 0!important;
+        height: 250px!important;
+    }
+    .owl-carousel .owl-item .figbg  img{
+        height: 220px;
+    }
+    .single_input.bdb{
+        border-radius: 0 30px 30px 0;
+    }
+    #email{
+        border-radius: 0 30px 30px 0;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px)
+{
+    .testimonial_slider .owl-prev {
+        left: 0;
+    }
+    .testimonial_slider .owl-next {
+        right: 0;
+    }
+}
+
