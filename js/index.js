@@ -1,5 +1,5 @@
 let acc = "1.quan.1983.vn";
-let bool = true;
+let bool = false;
 let sec = "";
 let token;
 
@@ -1079,62 +1079,7 @@ $("#personal-logo").click(function () {
 	}
 });
 
-// LƯU TẤT CẢ THAY ĐỔI + GỬI DATA
-$("#save-change").on("click", function () {
-	let home = document.getElementById("home").outerHTML;
-	let schedule = document.getElementById("schedule").outerHTML;
-	let subscribe = document.getElementById("subscribe").outerHTML;
-	let speaker = document.getElementById("speaker").outerHTML;
-	let testimonial = document.getElementById("testimonial").outerHTML;
-	let reg = document.getElementById("reg").outerHTML;
-	let faq = document.getElementById("faq").outerHTML;
-	let map = document.getElementById("map").outerHTML;
-	const payload = {
-		htmlString: [
-			{
-				name: "home",
-				html: home,
-				show: true,
-			},
-			{
-				name: "schedule",
-				html: schedule,
-				show: true,
-			},
-			{
-				name: "subscribe",
-				html: subscribe,
-				show: true,
-			},
-			{
-				name: "speaker",
-				html: speaker,
-				show: true,
-			},
-			{
-				name: "testimonial",
-				html: testimonial,
-				show: true,
-			},
-			{
-				name: "reg",
-				html: reg,
-				show: true,
-			},
-			{
-				name: "faq",
-				html: faq,
-				show: true,
-			},
-			{
-				name: "map",
-				html: map,
-				show: true,
-			},
-		],
-		acc: acc,
-	};
-});
+
 
 // LƯU ẢNH PHẦN HOME -> LOGO BUSINESS
 let logoBusiness;
@@ -1157,7 +1102,7 @@ inputLogo.addEventListener("change", (e) => {
 		url: "https://market.pomaskhoahocnaobo.com/iUploadImg",
 		data: homeFormData,
 		headers: {
-			Authorization:
+			'Authorization':
 				"Bearer eyJraWQiOiJBbWZJSXU3UFhhdXlUbHM3UmNyZmNIQUd1MUdCWkRab2I0U05GaVJuWUFJPSIsImFsZyI6IlYYYjU2In0.eyJzdWIiOiJjNTYyEEE1ZS05Zjc3LTQ2NDAtYTFmOS1hJJJ5Njk1OGE0MzUiLCJhdWQiOiI3Z2ZsZnNmMm1vNnQ4dXJpOG0xcHY5N3BnayIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6ImE2YWFjOTQxLTYzYWUtNGU5ZS1iYTE1LTRlYTNlOGIyZjQ5MSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTY4OTY0NDI2LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtd2VzdC0yLmFtYXpvbmF3cy5jb21cL3VzLXdlc3QtMl9qanRiZFZkZEYiLCJjb2duaXRvOnVzZXJuYW1lIjoiYzU2MmFjNWUtOWY3Ny00NjQwLWExZjktYTgxOTY5NThhNDM1IiwiZXhwIjoxNTY4OTY4MDI2LCJpYXQiOjE1Njg5NjQ0MjcsImVtYWlsIjoiYnJ5YW5Ab3BlbndvbmsuY29tIn0.fV4bgaKwXx-HjrBmGtBnSzaDHdP0JEeJ0sbE6MzuOJYWafT5gWfh9pLtkpUv-mgsnX3cVIWDVKC0H8_XM4ziUhsulZIRBwTiSca0CfABvanuMdbdjk1iK70aUxsrjHX0gK4SDUi4Zl6JNGws_SRbVi9Yq_ntx7ttXfUpZHjimfZ2mLidOLUruYctG1V_gU-dLD6CARCUbGh5aRk5nwX_5-HBUTbBVPYK3sXcVg2YRk63d-p3TITA5hoOEj9lxtHs3ZM7ZqNPl0XPUGghxdbvWnpSIUKrFLugRHqCiWxC38ZYiBhP0NDYoEMaOI-UrnEH1W6j-kr3fnH2LD5wOMJ_8Q",
 		},
 	})
@@ -1171,34 +1116,6 @@ inputLogo.addEventListener("change", (e) => {
 });
 
 // CAP NHAT ANH PHAN SCHEDULE
-// AVT SPEAKER 3
-// let avtSpeaker1
-// const inputSpeaker1 = document.getElementById("avt-speaker-1-input");
-// const imageSpeaker1 = document.getElementById("avt-speaker-1");
-// inputSpeaker1.addEventListener("change", (e) => {
-// 	if (e.target.files.length) {
-// 		console.log("1");
-// 		$("#avt-speaker-1").removeClass("d-none");
-// 		$("#avt-speaker-1-edit").hide();
-// 		const avtFormData = new FormData();
-// 		avtFormData.append("file", e.target.files[0]);
-// 		avtFormData.append("section", "schedule");
-// 		avtFormData.append("acc", acc);
-// 		$.ajax({
-// 			method: "POST",
-// 			url: "",
-// 			data: avtFormData,
-// 			processData: false,
-// 		})
-//         .done(function (msg) {
-//             console.log("msg", msg);
-//             // imageLogo.src = msg.link
-//         })
-//         .fail(function (jqXHR, textStatus, errorThrown) {
-//             console.log("fail");
-//         });
-// 	}
-// });
 for (let img of $(".speaker-avt")) {
 	img.addEventListener("click", function (e) {
 		if (bool) {
@@ -1358,13 +1275,19 @@ for (let input of $(".img-data-input")) {
 function isShowButtonHide() {
 	if (!bool) {
 		for (item of $(".checkbox-container")) {
-			console.log(item);
 			item.style.display = "none";
 		}
 		$("#save-change").css("display", "none");
 		$("#link-bl-edit").css("display", "none");
+		document.querySelector(".login").style.display='block';
 	} else {
+		for (item of $(".checkbox-container")) {
+			console.log(item);
+			item.style.display = "flex";
+		}
 		$("#save-change").css("display", "block");
+		$("#link-bl-edit").css("display", "flex	");
+		document.querySelector(".login").style.display='none';
 	}
 }
 isShowButtonHide();
@@ -1380,7 +1303,7 @@ function toggleModal() {
 }
 
 function windowOnClick(event) {
-	if (event.target === modal) {
+	if (event.target === modal ) {
 		toggleModal();
 	}
 }
@@ -1402,15 +1325,118 @@ $(".login-button").on("click", function (e) {
 		.done(function (msg) {
 			console.log("msg", msg);
 			acc = msg.acc;
-			bool = msg.data;
 			token = msg.token;
-			isShowButtonHide();
-			// imageLogo.src = msg.link
+			
 		})
 		.fail(function (jqXHR, textStatus, errorThrown) {
-			console.log("fail");
+			bool = true
+			isShowButtonHide();
+
 		});
 });
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
+
+// HÀM RENDER GIAO DIỆN HTML M TỪ JSON TRẢ VỀ TỪ API GET
+function renderHtml(html) {
+	$.ajax({
+		method:"GET",
+		url: "https://market.pomaskhoahocnaobo.com/iGetHtml",
+		data: {
+			acc,
+		},
+		header: {
+			'Authorization': `Bearer ${token}`,
+		}
+	})
+	.done(function (msg) {
+		let html = ''
+		msg.map(item =>{
+			if(item.show){
+				html+=item.html
+			}
+		})
+		$('body').html(html)
+	})
+	.fail(function (jqXHR, textStatus, errorThrown) {
+		
+
+	});
+}
+
+// LƯU TẤT CẢ THAY ĐỔI + GỬI DATA
+$("#save-change").on("click", function () {
+	let home = document.getElementById("home").outerHTML;
+	let schedule = document.getElementById("schedule").outerHTML;
+	let subscribe = document.getElementById("subscribe").outerHTML;
+	let speaker = document.getElementById("speaker").outerHTML;
+	let testimonial = document.getElementById("testimonial").outerHTML;
+	let reg = document.getElementById("reg").outerHTML;
+	let faq = document.getElementById("faq").outerHTML;
+	let map = document.getElementById("map").outerHTML;
+	const payload = {
+		htmlString: [
+			{
+				name: "home",
+				html: home,
+				show: true,
+			},
+			{
+				name: "schedule",
+				html: schedule,
+				show: true,
+			},
+			{
+				name: "subscribe",
+				html: subscribe,
+				show: true,
+			},
+			{
+				name: "speaker",
+				html: speaker,
+				show: true,
+			},
+			{
+				name: "testimonial",
+				html: testimonial,
+				show: true,
+			},
+			{
+				name: "reg",
+				html: reg,
+				show: true,
+			},
+			{
+				name: "faq",
+				html: faq,
+				show: true,
+			},
+			{
+				name: "map",
+				html: map,
+				show: true,
+			},
+		],
+		acc: acc,
+	};
+	$.ajax({
+		method:"POST",
+		url:'https://market.pomaskhoahocnaobo.com/iUpdateHtml',
+		data: payload,
+		header:{
+			'Authorization':
+					`Bearer ${token}`,
+		}
+	})
+	.done(function (res) {
+		console.log("link ", res);
+		// imageLogo.src = res
+		bool = false;
+		token = '';
+		renderHtml()
+	})
+	.fail(function (jqXHR, textStatus, errorThrown) {
+		console.log("fail");
+	});
+});
