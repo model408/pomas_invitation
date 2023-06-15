@@ -1,6 +1,11 @@
 let acc = "1.quan.1983.vn";
-let bool = false;
+let bool = true;
 let sec = "";
+let token;
+
+let text = "https://market.pomaskhoahocnaobo.com/iLogin";
+console.log(text.length);
+console.log(text.slice(37));
 const currentUrl = window.location.href;
 console.log(currentUrl);
 // OWL CAROUSEL
@@ -50,28 +55,45 @@ $(document).ready(function () {
 	});
 });
 
-let invdate;
-let invheading;
 $("button").click(function (event) {
 	event.preventDefault();
 });
-// NGAY TO CHUC
-$("#home-date").click(function () {
+// THỜI GIAN TỔ CHỨC
+let invtime;
+$("#time").click(function () {
 	if (bool) {
 		$(this).toggleClass("d-none");
-		$("#home-date-edit").css("display", "flex");
+		$("#time-edit").css("display", "flex");
 	}
 });
-document.getElementById("home-date-input").addEventListener("input", (e) => {
+document.getElementById("time-input").addEventListener("input", (e) => {
+	invtime = e.target.value;
+});
+$("#time-save").click(function () {
+	$("#time-edit").hide();
+	$("#time").removeClass("d-none");
+	$("#time").html(invtime);
+});
+
+// NGAY TO CHUC
+let invdate;
+$("#date").click(function () {
+	if (bool) {
+		$(this).toggleClass("d-none");
+		$("#date-edit").css("display", "flex");
+	}
+});
+document.getElementById("date-input").addEventListener("input", (e) => {
 	invdate = e.target.value;
 });
-$("#home-date-save").click(function () {
-	$("#home-date-edit").hide();
-	$("#home-date").removeClass("d-none");
-	$("#home-date").html(invdate);
+$("#date-save").click(function () {
+	$("#date-edit").hide();
+	$("#date").removeClass("d-none");
+	$("#date").html(invdate);
 });
 
 // TEN THU MOI
+let invheading;
 $("#invite-heading").click(function () {
 	if (bool) {
 		$(this).toggleClass("d-none");
@@ -154,11 +176,9 @@ document
 		spkname1 = e.target.value;
 	});
 $("#speaker-name-1-save").click(function () {
-	if (spkname1.trim() !== "") {
-		$("#speaker-name-1-edit").hide();
-		$("#speaker-name-1").removeClass("d-none");
-		$("#speaker-name-1").html(spkname1);
-	} else return;
+	$("#speaker-name-1-edit").hide();
+	$("#speaker-name-1").removeClass("d-none");
+	$("#speaker-name-1").html(spkname1);
 });
 
 // CHỨC DANH SPEAKER 1
@@ -520,13 +540,13 @@ $("#partner-pos-3-save").click(function () {
 });
 
 // AVT CẢM NGHĨ 1
-// let avtTestimonial1;
+let avtTestimonial1;
 const inputTestimonial1 = document.getElementById("avt-testimonial-1-input");
 const imgTestimonial1 = document.getElementById("avt-testimonial-1");
 inputTestimonial1.addEventListener("change", (e) => {
 	if (e.target.files.length) {
-		// avtTestimonial1 = URL.createObjectURL(e.target.files[0]);
-		// imgTestimonial1.src = avtTestimonial1;
+		avtTestimonial1 = URL.createObjectURL(e.target.files[0]);
+		imgTestimonial1.src = avtTestimonial1;
 		const testimonialFormData = new FormData();
 		testimonialFormData.append("file", e.target.files[0]);
 		testimonialFormData.append("section", "testimonial");
@@ -1134,12 +1154,16 @@ inputLogo.addEventListener("change", (e) => {
 	homeFormData.append("acc", acc);
 	$.ajax({
 		method: "POST",
-		url: "",
+		url: "https://market.pomaskhoahocnaobo.com/iUploadImg",
 		data: homeFormData,
+		headers: {
+			Authorization:
+				"Bearer eyJraWQiOiJBbWZJSXU3UFhhdXlUbHM3UmNyZmNIQUd1MUdCWkRab2I0U05GaVJuWUFJPSIsImFsZyI6IlYYYjU2In0.eyJzdWIiOiJjNTYyEEE1ZS05Zjc3LTQ2NDAtYTFmOS1hJJJ5Njk1OGE0MzUiLCJhdWQiOiI3Z2ZsZnNmMm1vNnQ4dXJpOG0xcHY5N3BnayIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6ImE2YWFjOTQxLTYzYWUtNGU5ZS1iYTE1LTRlYTNlOGIyZjQ5MSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTY4OTY0NDI2LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtd2VzdC0yLmFtYXpvbmF3cy5jb21cL3VzLXdlc3QtMl9qanRiZFZkZEYiLCJjb2duaXRvOnVzZXJuYW1lIjoiYzU2MmFjNWUtOWY3Ny00NjQwLWExZjktYTgxOTY5NThhNDM1IiwiZXhwIjoxNTY4OTY4MDI2LCJpYXQiOjE1Njg5NjQ0MjcsImVtYWlsIjoiYnJ5YW5Ab3BlbndvbmsuY29tIn0.fV4bgaKwXx-HjrBmGtBnSzaDHdP0JEeJ0sbE6MzuOJYWafT5gWfh9pLtkpUv-mgsnX3cVIWDVKC0H8_XM4ziUhsulZIRBwTiSca0CfABvanuMdbdjk1iK70aUxsrjHX0gK4SDUi4Zl6JNGws_SRbVi9Yq_ntx7ttXfUpZHjimfZ2mLidOLUruYctG1V_gU-dLD6CARCUbGh5aRk5nwX_5-HBUTbBVPYK3sXcVg2YRk63d-p3TITA5hoOEj9lxtHs3ZM7ZqNPl0XPUGghxdbvWnpSIUKrFLugRHqCiWxC38ZYiBhP0NDYoEMaOI-UrnEH1W6j-kr3fnH2LD5wOMJ_8Q",
+		},
 	})
-		.done(function (msg) {
-			console.log("msg", msg);
-			// imageLogo.src = msg.link
+		.done(function (res) {
+			console.log("link ", res);
+			// imageLogo.src = res
 		})
 		.fail(function (jqXHR, textStatus, errorThrown) {
 			console.log("fail");
@@ -1176,7 +1200,6 @@ inputLogo.addEventListener("change", (e) => {
 // 	}
 // });
 for (let img of $(".speaker-avt")) {
-	console.log(img);
 	img.addEventListener("click", function (e) {
 		if (bool) {
 			const id = e.target.id.charAt(12);
@@ -1186,11 +1209,16 @@ for (let img of $(".speaker-avt")) {
 	});
 }
 
+let speakerImg;
 for (let input of $(".speaker-avt-input")) {
 	const avtFormData = new FormData();
 	input.addEventListener("change", function (e) {
 		// lấy ID ảnh
 		let id = e.target.id.charAt(12);
+		if (e.target.files.length) {
+			speakerImg = URL.createObjectURL(e.target.files[0]);
+			document.getElementById(`avt-speaker-${id}`).src = speakerImg;
+		}
 		// FORM DATA GỬI API
 		avtFormData.append("file", e.target.files[0]);
 		avtFormData.append("section", "schedule");
@@ -1198,13 +1226,17 @@ for (let input of $(".speaker-avt-input")) {
 		// CALL API GET SRC ẢNH -> CẬP NHẬT SRC
 		$.ajax({
 			method: "POST",
-			url: "",
+			url: "https://market.pomaskhoahocnaobo.com/iUploadImg",
 			data: avtFormData,
 			processData: false,
+			headers: {
+				'Authorization':
+					`Bearer ${token}`,
+			},
 		})
-			.done(function (msg) {
-				console.log("msg", msg);
-				// imageLogo.src = msg.link
+			.done(function (res) {
+				console.log("link ", res);
+				// imageLogo.src = res
 			})
 			.fail(function (jqXHR, textStatus, errorThrown) {
 				console.log("fail");
@@ -1221,7 +1253,6 @@ for (let input of $(".speaker-avt-input")) {
 
 // CAP NHAT ANH PHẦN PARTNER
 for (let img of $(".partner-avt")) {
-	console.log(img);
 	img.addEventListener("click", function (e) {
 		if (bool) {
 			const id = e.target.id.charAt(12);
@@ -1231,29 +1262,34 @@ for (let img of $(".partner-avt")) {
 	});
 }
 
+let logoPartner;
 for (let input of $(".partner-avt-input")) {
 	const avtFormData = new FormData();
 	input.addEventListener("change", function (e) {
 		// lấy ID ảnh
 		let id = e.target.id.charAt(12);
+		if (e.target.files.length) {
+			logoPartner = URL.createObjectURL(e.target.files[0]);
+			document.getElementById(`avt-partner-${id}`).src = logoPartner;
+		}
 		// FORM DATA GỬI API
 		avtFormData.append("file", e.target.files[0]);
 		avtFormData.append("section", "speaker");
 		avtFormData.append("acc", acc);
-
-		for (var pair of avtFormData.entries()) {
-			console.log(pair[0] + ", " + pair[1]);
-		}
 		// CALL API GET SRC ẢNH -> CẬP NHẬT SRC
 		$.ajax({
 			method: "POST",
-			url: "",
+			url: "https://market.pomaskhoahocnaobo.com/iUploadImg",
 			data: avtFormData,
 			processData: false,
+			headers: {
+				'Authorization':
+					`Bearer ${token}`,
+			},
 		})
-			.done(function (msg) {
-				console.log("msg", msg);
-				// imageLogo.src = msg.link
+			.done(function (res) {
+				console.log("link ", res);
+				// imageLogo.src = res
 			})
 			.fail(function (jqXHR, textStatus, errorThrown) {
 				console.log("fail");
@@ -1267,7 +1303,6 @@ for (let input of $(".partner-avt-input")) {
 
 // CẬP NHẬT ẢNH CỘNG ĐỒNG
 for (let img of $(".community-img")) {
-	console.log(img);
 	img.addEventListener("click", function (e) {
 		if (bool) {
 			const id = e.target.id.charAt(9);
@@ -1276,11 +1311,16 @@ for (let img of $(".community-img")) {
 		}
 	});
 }
+let communityImg;
 for (let input of $(".img-data-input")) {
 	const imgFormData = new FormData();
 	input.addEventListener("change", function (e) {
 		// lấy ID ảnh
 		let id = e.target.id.charAt(9);
+		if (e.target.files.length) {
+			communityImg = URL.createObjectURL(e.target.files[0]);
+			document.getElementById(`img-data-${id}`).src = communityImg;
+		}
 		// FORM DATA GỬI API
 		imgFormData.append("file", e.target.files[0]);
 		imgFormData.append("section", "faq");
@@ -1292,9 +1332,13 @@ for (let input of $(".img-data-input")) {
 		// CALL API GET SRC ẢNH -> CẬP NHẬT SRC
 		$.ajax({
 			method: "POST",
-			url: "",
+			url: "https://market.pomaskhoahocnaobo.com/iUploadImg",
 			data: imgFormData,
 			processData: false,
+			headers: {
+				'Authorization':
+					`Bearer ${token}`,
+			},
 		})
 			.done(function (msg) {
 				console.log("msg", msg);
@@ -1311,17 +1355,19 @@ for (let input of $(".img-data-input")) {
 }
 
 // SAU KHI ĐĂNG NHẬP NHẬN ĐƯỢC 1 BOOLEAN
-
-if (!bool) {
-	for (item of $(".checkbox-container")) {
-		console.log(item);
-		item.style.display = "none";
+function isShowButtonHide() {
+	if (!bool) {
+		for (item of $(".checkbox-container")) {
+			console.log(item);
+			item.style.display = "none";
+		}
+		$("#save-change").css("display", "none");
+		$("#link-bl-edit").css("display", "none");
+	} else {
+		$("#save-change").css("display", "block");
 	}
-	$("#save-change").css("display", "none");
-	$("#link-bl-edit").css("display", "none");
-} else {
-	$("#save-change").css("display", "block");
 }
+isShowButtonHide();
 
 // XU LI MODAL DANG NHAP
 let modal = document.querySelector(".login");
@@ -1348,32 +1394,22 @@ $(".login-button").on("click", function (e) {
 		method: "POST",
 		url: "https://market.pomaskhoahocnaobo.com/iLogin",
 		data,
-		headers: { "Content-Type": "application/json" },
+		headers: { 
+			"Content-Type": "application/json" ,
+			'Authorization': `Bearer ${token}`,
+		},
 	})
 		.done(function (msg) {
 			console.log("msg", msg);
 			acc = msg.acc;
-			bool = true;
-
+			bool = msg.data;
+			token = msg.token;
+			isShowButtonHide();
 			// imageLogo.src = msg.link
 		})
 		.fail(function (jqXHR, textStatus, errorThrown) {
 			console.log("fail");
 		});
-	// $.ajax({
-	// 	method: "POST",
-	// 	url: "https://market.pomaskhoahocnaobo.com/iGetHtml?acc=1.quan1983.vn",
-	// })
-	// 	.done(function (msg) {
-	// 		console.log("msg", msg);
-	// 		acc = msg.acc;
-	// 		bool = true;
-
-	// 		// imageLogo.src = msg.link
-	// 	})
-	// 	.fail(function (jqXHR, textStatus, errorThrown) {
-	// 		console.log("fail");
-	// 	});
 });
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);

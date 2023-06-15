@@ -636,6 +636,8 @@ form.reg_form .col-md-3 .single_input {
 }
 .personal-logo img{
     width: 100%;
+    min-height: 50px;
+    min-width: 50px ;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
@@ -1231,7 +1233,7 @@ input[type='radio'] {
 }
 .business-container {
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 10px;
     display: flex;
     align-items: center;
@@ -1322,10 +1324,10 @@ input[type='radio'] {
   }
   .close-button {
     float: right;
-    width: 2rem;
-    height: 2rem;
-    font-size: 1.2em;
-    line-height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5em;
+    line-height: 2.5rem;
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
