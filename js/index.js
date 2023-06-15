@@ -11,7 +11,7 @@ console.log(currentUrl);
 // OWL CAROUSEL
 $(document).ready(function () {
 	$(".testimonial_slider").owlCarousel({
-		// loop:true,
+		loop:true,
 		responsiveClass: true,
 		nav: true,
 		margin: 20,
@@ -34,7 +34,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 	$(".speaker_slider").owlCarousel({
-		// loop:true,
+		loop:true,
 		margin: 80,
 		// center:true,
 		responsiveClass: true,
