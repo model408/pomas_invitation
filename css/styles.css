@@ -1,4 +1,4 @@
-@font-face {font-family: "et-line"; src: url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.eot"); src: url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.woff") format("woff"), url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ee5d74f0b75c5754c723eb16d34e3d65.svg#et-line") format("svg"); }
+
 @import url('https://fonts.googleapis.com/css?family=Quicksand:700&display=swap');
 *{
     margin: 0;
@@ -28,8 +28,13 @@ html{
 input{
     color: #000;
 }
+
 label{
     margin-bottom: 0!important;
+}
+html{
+    display:flex;
+    justify-content: space-around;
 }
 .h-20{
     height: 20px!important;
@@ -398,25 +403,23 @@ p.speaker_pos {
 form.reg_form .col-md-3 .single_input {
     background: #0c2e53 none repeat scroll 0 0;
     position: relative;
+    height: 55px;
 }
 .single_input input::placeholder{
     color:#7a7777;
 }
-.single_input:before {
-    background: #0b2746 none repeat scroll 0 0;
-    color: #d32f2f;
-    content: "";
-    height: 100%;
-    line-height: 60px;
+.single_input img{
+    width: 25px ;
+    height: 25px;
     position: absolute;
-    text-align: right;
-    width: 35px;
-    z-index: 2;
+    top: 15px;
+    left: 15px;
 }
+
 .single_input:last-child:before{
     height: 0;
 }
-.single_input:after {
+/* .single_input:after {
     position: absolute;
     content: '\e040';
     height: 60px;
@@ -430,7 +433,7 @@ form.reg_form .col-md-3 .single_input {
     color: #d32f2f;
     font-family: et-line;
     font-size: 22px;
-}
+} */
 
 .col-md-3:nth-child(2) .single_input:after {
     content: '\e004';
@@ -1019,7 +1022,7 @@ form.reg_form .col-md-3 .single_input {
     form.reg_form .col-md-3 .single_input {
         margin-bottom: 5px;
     }
-    .single_input:before {
+    /* .single_input:before {
         line-height: 55px;
         width: 0;
     }
@@ -1027,7 +1030,7 @@ form.reg_form .col-md-3 .single_input {
         left: 5px;
         font-size: 18px;
         line-height: 55px;
-    }
+    } */
     .single_input > input {
         padding-left: 50px;
         height: 55px;
@@ -1302,9 +1305,9 @@ form.reg_form .col-md-3 .single_input {
     .submit-btn .single_input:after{
         display: none;
     }
-    .single_input:after{
+    /* .single_input:after{
         left:15px;
-    }
+    } */
     .single_input input{
         padding-left: 60px;
     }
@@ -1355,6 +1358,16 @@ form.reg_form .col-md-3 .single_input {
     }
     #email{
         border-radius: 0 30px 30px 0;
+    }
+    .single_input input::placeholder{
+        color:#7a7777;
+    }
+    .single_input img{
+        width: 30px ;
+        height: 30px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
     }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px)

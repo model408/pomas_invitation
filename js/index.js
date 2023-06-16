@@ -570,8 +570,10 @@ inputTestimonial1.addEventListener("change", (e) => {
 	$("#avt-testimonial-1").removeClass("d-none");
 });
 $("#avt-testimonial-1").click(function () {
-	$(this).toggleClass("d-none");
-	$("#avt-testimonial-1-edit").css("display", "flex");
+	if (bool) {
+		$(this).toggleClass("d-none");
+		$("#avt-testimonial-1-edit").css("display", "flex");
+	}
 });
 
 // CẢM NGHĨ 1
@@ -1443,9 +1445,7 @@ $("#save-change").on("click", function () {
 });
 
 // API XU LI FORM DANG KI 
-function handleSubmitForm() {
-	const nameInput = document.getElementById('name')
-	const telInput = document.getElementById('tel')
-	const emailInput = document.getElementById('email')
+// function handleSubmitForm() {
+// 	for( let i =0 ; i<)
 	
-}
+// }
